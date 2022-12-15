@@ -6,6 +6,7 @@ use App\Models\User;;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
+
 class HomeController extends Controller
 {
     /**
@@ -26,15 +27,9 @@ class HomeController extends Controller
     public function index()
     {
         $user = Auth::user();
-        return view('home', ['user' => $user]);
+        return view('home',[
+            'user' => $user
+        ]);
     }
 
-    public function dataupdate(Request $request)
-    {
-        $editedUser = json_decode($request->user);
-        $user = User::where('id',$editedUser->id)->first();
-        $user->name = $editedUser->name;
-        $user->save();
-        return $user;
-    }
 }

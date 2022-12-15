@@ -15,13 +15,22 @@ use App\Http\Controllers\HomeController;
 |
 */
 
+//Route::get('/', function () {
+//    return view('home');
+//});
+//
+Auth::routes();
+Route::get('/home/settings', [SettingsController::class, 'index'])->name('settings');
+Route::post('settings', [SettingsController::class, 'update'])->name('update.settings');
+Route::get('/dataupdate', [HomeController::class, 'dataupdate'])->name('dataupdate');
+Route::get('/home', [HomeController::class, 'index'])->name('home');
+
 Route::get('/', function () {
     return view('welcome');
 });
 
 Auth::routes();
-Route::get('/home/settings', [SettingsController::class, 'index'])->name('settings');
-Route::post('settings', [SettingsController::class, 'update'])->name('update.settings');
-Route::get('/dataupdate', [HomeController::class, 'dataupdate'])->name('dataupdate');
+Route::post('/profile', 'ProfileController@update')->name('update.profile');
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [HomeController::class, 'index'])->name('home');
+Route::get('/dataupdate', [SettingsController::class, 'dataupdate'])->name('dataupdate');

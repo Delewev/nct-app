@@ -5,6 +5,7 @@
     <link rel="stylesheet" href={{asset('css/app2.css')}}>
     <div class="fon1" style="background-image: url(img/fon-login.jpg);">
         <div class="conteiner-register">
+
             <div class="form">
                 <div class="logo">
                     <img class="logo-img" src="{{ asset('img/1_NCTnew.png') }}" alt="">

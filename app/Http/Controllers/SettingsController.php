@@ -20,12 +20,22 @@ class SettingsController extends Controller
         $user->lastname=$request->input('lastname');
         $user->firstname=$request->input('firstname');
         $user->phone=$request->input('phone');
-        $user->person=$request->person;
-        $user->day=$request->day;
-        $user->month=$request->month;
-        $user->year=$request->year;
-        $user->team=$request->team;
+        $user->person=$request->input('person');
+        $user->day=$request->input('day');
+        $user->month=$request->input('month');;
+        $user->year=$request->input('year');;
+        $user->team=$request->input('team');
         $user->save();
+    }
+
+    public function dataupdate(Request $request)
+    {
+        $editedUser = json_decode($request->user);
+        $user = User::where('id',$editedUser->id)->first();
+        $user->name = $editedUser->name;
+        $user->lastname = $editedUser->lastname;
+        $user->save();
+        return $user;
     }
 
 

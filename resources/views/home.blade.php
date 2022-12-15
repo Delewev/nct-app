@@ -1,5 +1,11 @@
 @extends('layouts.app')
 
 @section('content')
-    <link rel="stylesheet" href={{asset('css/home.css')}}>
+    <div class="container">
+        <div class="row justify-content-center">
+            {{route('dataupdate')}}
+            <user-component dataupdate="{{route('dataupdate')}}" :user=@json($user) ></user-component>
+        </div>
+    </div>
 @endsection
+
