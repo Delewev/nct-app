@@ -15,13 +15,11 @@ class ChangeUserTable extends Migration
     {
         Schema::table('users', function (Blueprint $table){
             $table->string('lastname')->nullable();
-            $table->string('firstname')->nullable();
             $table->string('phone')->nullable();
             $table->string('person')->nullable();
             $table->string('day')->nullable();
             $table->string('month')->nullable();
             $table->string('year')->nullable();
-            $table->string('team')->nullable();
         });
     }
 

@@ -11,9 +11,6 @@
     background-size: cover;
     overflow-y: scroll;
     scroll-margin: revert   ;
-
-
-
 }
 .fon{
     width: auto;
@@ -112,5 +109,6 @@
 .btn-register:hover {
     background-color: #69A37A;
 }
+
 
 

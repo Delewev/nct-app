@@ -5375,6 +5375,104 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   props: {
@@ -28343,15 +28441,13 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "container" }, [
-    _c("div", { staticClass: "row justify-content-center" }, [
-      _c("div", { staticClass: "col-md-8" }, [
-        _c("div", { staticClass: "card" }, [
-          _c("div", { staticClass: "card-header" }, [_vm._v("Профиль")]),
+  return _c("div", [
+    _c("div", [
+      _c("div", { staticClass: "form-name" }, [
+        _c("div", [
+          _vm._m(0),
           _vm._v(" "),
-          _c("div", { staticClass: "card-body" }, [
-            _c("div", [_vm._v(" Я - " + _vm._s(_vm.thisUser.name))]),
-            _vm._v(" "),
+          _c("div", [
             _c("input", {
               directives: [
                 {
@@ -28361,7 +28457,7 @@ var render = function () {
                   expression: "thisUser.name",
                 },
               ],
-              attrs: { type: "text" },
+              attrs: { type: "text", name: "name", id: "name" },
               domProps: { value: _vm.thisUser.name },
               on: {
                 input: function ($event) {
@@ -28372,9 +28468,13 @@ var render = function () {
                 },
               },
             }),
-            _vm._v(" "),
-            _c("div", [_vm._v("Фамилия - " + _vm._s(_vm.thisUser.lastname))]),
-            _vm._v(" "),
+          ]),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "form-name-f" }, [
+          _vm._m(1),
+          _vm._v(" "),
+          _c("div", [
             _c("input", {
               directives: [
                 {
@@ -28384,7 +28484,12 @@ var render = function () {
                   expression: "thisUser.lastname",
                 },
               ],
-              attrs: { type: "text" },
+              attrs: {
+                type: "text",
+                name: "lastname",
+                id: "lastname",
+                placeholder: "Фамилия",
+              },
               domProps: { value: _vm.thisUser.lastname },
               on: {
                 input: function ($event) {
@@ -28395,29 +28500,374 @@ var render = function () {
                 },
               },
             }),
-            _vm._v(" "),
-            _c(
-              "button",
+          ]),
+        ]),
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "form-name-f" }, [
+        _vm._m(2),
+        _vm._v(" "),
+        _c("div", [
+          _c("input", {
+            directives: [
               {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.thisUser.phone,
+                expression: "thisUser.phone",
+              },
+            ],
+            attrs: { type: "tel", name: "phone", id: "phone" },
+            domProps: { value: _vm.thisUser.phone },
+            on: {
+              input: function ($event) {
+                if ($event.target.composing) {
+                  return
+                }
+                _vm.$set(_vm.thisUser, "phone", $event.target.value)
+              },
+            },
+          }),
+        ]),
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "form-info" }, [
+        _c("div", { staticClass: "form-pol" }, [
+          _vm._m(3),
+          _vm._v(" "),
+          _c("div", [
+            _c(
+              "select",
+              {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.thisUser.person,
+                    expression: "thisUser.person",
+                  },
+                ],
+                attrs: { name: "person", id: "person" },
                 on: {
-                  click: function ($event) {
-                    return _vm.sendData()
+                  change: function ($event) {
+                    var $$selectedVal = Array.prototype.filter
+                      .call($event.target.options, function (o) {
+                        return o.selected
+                      })
+                      .map(function (o) {
+                        var val = "_value" in o ? o._value : o.value
+                        return val
+                      })
+                    _vm.$set(
+                      _vm.thisUser,
+                      "person",
+                      $event.target.multiple ? $$selectedVal : $$selectedVal[0]
+                    )
                   },
                 },
               },
-              [_vm._v("Изменить")]
+              [
+                _c("option", [_vm._v("Мужской")]),
+                _vm._v(" "),
+                _c("option", [_vm._v("Женский")]),
+              ]
             ),
+          ]),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "form-info-data" }, [
+          _vm._m(4),
+          _vm._v(" "),
+          _c("div", { staticClass: "form-age" }, [
+            _c("div", { staticClass: "form-age-inter" }, [
+              _c(
+                "select",
+                {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.thisUser.day,
+                      expression: "thisUser.day",
+                    },
+                  ],
+                  attrs: { name: "day", id: "day" },
+                  on: {
+                    change: function ($event) {
+                      var $$selectedVal = Array.prototype.filter
+                        .call($event.target.options, function (o) {
+                          return o.selected
+                        })
+                        .map(function (o) {
+                          var val = "_value" in o ? o._value : o.value
+                          return val
+                        })
+                      _vm.$set(
+                        _vm.thisUser,
+                        "day",
+                        $event.target.multiple
+                          ? $$selectedVal
+                          : $$selectedVal[0]
+                      )
+                    },
+                  },
+                },
+                [
+                  _c("option", [_vm._v("1")]),
+                  _vm._v(" "),
+                  _c("option", [_vm._v("2")]),
+                  _vm._v(" "),
+                  _c("option", [_vm._v("3")]),
+                  _vm._v(" "),
+                  _c("option", [_vm._v("4")]),
+                  _vm._v(" "),
+                  _c("option", [_vm._v("5")]),
+                  _vm._v(" "),
+                  _c("option", [_vm._v("6")]),
+                  _vm._v(" "),
+                  _c("option", [_vm._v("7")]),
+                  _vm._v(" "),
+                  _c("option", [_vm._v("8")]),
+                  _vm._v(" "),
+                  _c("option", [_vm._v("9")]),
+                  _vm._v(" "),
+                  _c("option", [_vm._v("10")]),
+                  _vm._v(" "),
+                  _c("option", [_vm._v("11")]),
+                  _vm._v(" "),
+                  _c("option", [_vm._v("12")]),
+                  _vm._v(" "),
+                  _c("option", [_vm._v("13")]),
+                  _vm._v(" "),
+                  _c("option", [_vm._v("14")]),
+                  _vm._v(" "),
+                  _c("option", [_vm._v("15")]),
+                  _vm._v(" "),
+                  _c("option", [_vm._v("16")]),
+                  _vm._v(" "),
+                  _c("option", [_vm._v("17")]),
+                  _vm._v(" "),
+                  _c("option", [_vm._v("18")]),
+                  _vm._v(" "),
+                  _c("option", [_vm._v("19")]),
+                  _vm._v(" "),
+                  _c("option", [_vm._v("20")]),
+                  _vm._v(" "),
+                  _c("option", [_vm._v("21")]),
+                  _vm._v(" "),
+                  _c("option", [_vm._v("22")]),
+                  _vm._v(" "),
+                  _c("option", [_vm._v("23")]),
+                  _vm._v(" "),
+                  _c("option", [_vm._v("24")]),
+                  _vm._v(" "),
+                  _c("option", [_vm._v("25")]),
+                  _vm._v(" "),
+                  _c("option", [_vm._v("26")]),
+                  _vm._v(" "),
+                  _c("option", [_vm._v("27")]),
+                  _vm._v(" "),
+                  _c("option", [_vm._v("29")]),
+                  _vm._v(" "),
+                  _c("option", [_vm._v("30")]),
+                  _vm._v(" "),
+                  _c("option", [_vm._v("31")]),
+                ]
+              ),
+            ]),
             _vm._v(" "),
-            _c("br"),
+            _c("div", [
+              _c(
+                "select",
+                {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.thisUser.month,
+                      expression: "thisUser.month",
+                    },
+                  ],
+                  attrs: { name: "month", id: "month" },
+                  on: {
+                    change: function ($event) {
+                      var $$selectedVal = Array.prototype.filter
+                        .call($event.target.options, function (o) {
+                          return o.selected
+                        })
+                        .map(function (o) {
+                          var val = "_value" in o ? o._value : o.value
+                          return val
+                        })
+                      _vm.$set(
+                        _vm.thisUser,
+                        "month",
+                        $event.target.multiple
+                          ? $$selectedVal
+                          : $$selectedVal[0]
+                      )
+                    },
+                  },
+                },
+                [
+                  _c("option", [_vm._v("Январь")]),
+                  _vm._v(" "),
+                  _c("option", [_vm._v("Февраль")]),
+                  _vm._v(" "),
+                  _c("option", [_vm._v("Март")]),
+                  _vm._v(" "),
+                  _c("option", [_vm._v("Апрель")]),
+                  _vm._v(" "),
+                  _c("option", [_vm._v("Май")]),
+                  _vm._v(" "),
+                  _c("option", [_vm._v("Июнь")]),
+                  _vm._v(" "),
+                  _c("option", [_vm._v("Июль")]),
+                  _vm._v(" "),
+                  _c("option", [_vm._v("Август")]),
+                  _vm._v(" "),
+                  _c("option", [_vm._v("Сентябрь")]),
+                  _vm._v(" "),
+                  _c("option", [_vm._v("Октябрь")]),
+                  _vm._v(" "),
+                  _c("option", [_vm._v("Ноябрь")]),
+                  _vm._v(" "),
+                  _c("option", [_vm._v("Декабрь")]),
+                ]
+              ),
+            ]),
             _vm._v(" "),
-            _c("hr"),
+            _c("div", { staticClass: "form-age-god" }, [
+              _c(
+                "select",
+                {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.thisUser.year,
+                      expression: "thisUser.year",
+                    },
+                  ],
+                  attrs: { name: "year", id: "year" },
+                  on: {
+                    change: function ($event) {
+                      var $$selectedVal = Array.prototype.filter
+                        .call($event.target.options, function (o) {
+                          return o.selected
+                        })
+                        .map(function (o) {
+                          var val = "_value" in o ? o._value : o.value
+                          return val
+                        })
+                      _vm.$set(
+                        _vm.thisUser,
+                        "year",
+                        $event.target.multiple
+                          ? $$selectedVal
+                          : $$selectedVal[0]
+                      )
+                    },
+                  },
+                },
+                [
+                  _c("option", [_vm._v("1991")]),
+                  _vm._v(" "),
+                  _c("option", [_vm._v("1992")]),
+                  _vm._v(" "),
+                  _c("option", [_vm._v("1993")]),
+                  _vm._v(" "),
+                  _c("option", [_vm._v("1994")]),
+                  _vm._v(" "),
+                  _c("option", [_vm._v("1995")]),
+                  _vm._v(" "),
+                  _c("option", [_vm._v("1996")]),
+                  _vm._v(" "),
+                  _c("option", [_vm._v("1997")]),
+                  _vm._v(" "),
+                  _c("option", [_vm._v("1998")]),
+                  _vm._v(" "),
+                  _c("option", [_vm._v("1999")]),
+                  _vm._v(" "),
+                  _c("option", [_vm._v("2000")]),
+                  _vm._v(" "),
+                  _c("option", [_vm._v("2001")]),
+                  _vm._v(" "),
+                  _c("option", [_vm._v("2002")]),
+                  _vm._v(" "),
+                  _c("option", [_vm._v("2003")]),
+                  _vm._v(" "),
+                  _c("option", [_vm._v("2004")]),
+                  _vm._v(" "),
+                  _c("option", [_vm._v("2005")]),
+                  _vm._v(" "),
+                  _c("option", [_vm._v("2006")]),
+                ]
+              ),
+            ]),
           ]),
         ]),
       ]),
     ]),
+    _vm._v(" "),
+    _c("div", [
+      _c(
+        "button",
+        {
+          staticClass: "button",
+          attrs: {
+            type: "submit",
+            name: "update",
+            id: "submit",
+            onClick: "submit",
+          },
+          on: {
+            click: function ($event) {
+              return _vm.sendData()
+            },
+          },
+        },
+        [
+          _c("span", [_vm._v("\n                Сохранить\n            ")]),
+          _vm._v(" "),
+          _c("i", [_vm._v("v")]),
+        ]
+      ),
+    ]),
   ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", [_c("h6", [_vm._v("Имя")])])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", [_c("h6", [_vm._v("Фамилия")])])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", [_c("h6", [_vm._v("Номер Телефона")])])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", [_c("h6", [_vm._v("Пол")])])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", [_c("h6", [_vm._v("Дата рождения")])])
+  },
+]
 render._withStripped = true
 
 

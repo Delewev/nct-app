@@ -21,12 +21,12 @@ use App\Http\Controllers\HomeController;
 //
 Auth::routes();
 Route::get('/home/settings', [SettingsController::class, 'index'])->name('settings');
-Route::post('settings', [SettingsController::class, 'update'])->name('update.settings');
+Route::post('settings', [SettingsController::class, 'dataupdate'])->name('update.settings');
 Route::get('/dataupdate', [HomeController::class, 'dataupdate'])->name('dataupdate');
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth.login');
 });
 
 Auth::routes();

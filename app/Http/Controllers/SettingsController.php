@@ -15,29 +15,20 @@ class SettingsController extends Controller
         return view('settings', ['user' => $user]);
     }
 
-    public function update(Request $request){
-        $user = Auth::user();
-        $user->lastname=$request->input('lastname');
-        $user->firstname=$request->input('firstname');
-        $user->phone=$request->input('phone');
-        $user->person=$request->input('person');
-        $user->day=$request->input('day');
-        $user->month=$request->input('month');;
-        $user->year=$request->input('year');;
-        $user->team=$request->input('team');
-        $user->save();
-    }
-
     public function dataupdate(Request $request)
     {
         $editedUser = json_decode($request->user);
-        $user = User::where('id',$editedUser->id)->first();
+        $user = User::where('id', $editedUser->id)->first();
         $user->name = $editedUser->name;
         $user->lastname = $editedUser->lastname;
+        $user->phone = $editedUser->phone;
+        $user->person = $editedUser->person;
+        $user->day = $editedUser->day;
+        $user->month = $editedUser->month;
+        $user->year = $editedUser->year;
         $user->save();
         return $user;
     }
-
 
 
 }
