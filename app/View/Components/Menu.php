@@ -25,4 +25,5 @@ class Menu extends Component
     {
         return view('components.menu');
     }
+
 }

@@ -24,6 +24,8 @@ Route::get('/home/settings', [SettingsController::class, 'index'])->name('settin
 Route::post('settings', [SettingsController::class, 'dataupdate'])->name('update.settings');
 Route::get('/dataupdate', [HomeController::class, 'dataupdate'])->name('dataupdate');
 Route::get('/home', [HomeController::class, 'index'])->name('home');
+Route::get('/my', [HomeController::class, 'my'])->name('my');
+
 
 Route::get('/', function () {
     return view('auth.login');

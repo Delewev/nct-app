@@ -9,7 +9,7 @@
                 <div class="img">
                     <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
                        >
-                        <img class="avotar" src="{{asset('img/avotar.jpg')}}" alt="">
+                        <img class="avotar" src="{{asset('img/Icon/icon1.png')}}" alt="">
                     </a>
 
                 </div>

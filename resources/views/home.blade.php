@@ -2,8 +2,12 @@
 
 @section('content')
 
-<x-menu>
+        @include('components.menu')
+        <link rel="stylesheet" href="{{asset('css/home.css')}}">
+        <div class="contents">
+            <div class="post">
 
-</x-menu>
+            </div>
+        </div>
 @endsection
 
