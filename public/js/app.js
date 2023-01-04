@@ -5473,6 +5473,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   props: {
@@ -28517,7 +28518,13 @@ var render = function () {
                 expression: "thisUser.phone",
               },
             ],
-            attrs: { type: "tel", name: "phone", id: "phone" },
+            attrs: {
+              type: "tel",
+              name: "phone",
+              placeholder: "+7 ___ ___-____",
+              "data-mask": "+7 ___ ___-____",
+              id: "phone",
+            },
             domProps: { value: _vm.thisUser.phone },
             on: {
               input: function ($event) {

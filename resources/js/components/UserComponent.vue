@@ -20,7 +20,8 @@
             <div class="form-name-f">
                 <div><h6>Номер Телефона</h6></div>
                 <div>
-                    <input type="tel" name="phone" id="phone" v-model="thisUser.phone">
+                        <input type="tel" name="phone" placeholder="+7 ___ ___-____" data-mask="+7 ___ ___-____"
+                           id="phone" v-model="thisUser.phone">
                 </div>
             </div>
             <div class="form-info">

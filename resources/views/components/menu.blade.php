@@ -9,7 +9,7 @@
                     <li class="li"><a href="" class="a"><img class="img" src="{{asset('img/Icon/icon3.png')}}" alt="">Фото альбомы</a></li>
                     <li class="li"><a href="" class="a"><img class="img" src="{{asset('img/Icon/icon4.png')}}" alt="">Сообщение</a></li>
                     <li class="li"><a href="" class="a"><img class="img" src="{{asset('img/Icon/icon5.png')}}" alt="">Магазин Cheer</a></li>
-                    <li class="li"><a href="" class="a"><img class="img" src="{{asset('img/Icon/icon6.png')}}" alt="">События</a></li>
+                    <li class="li"><a href="{{route('ments')}}" class="a"><img class="img" src="{{asset('img/Icon/icon6.png')}}" alt="">События</a></li>
                 </ul>
             </div>
             </div>

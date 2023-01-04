@@ -19,6 +19,7 @@
 .a{
     text-decoration: none;
     color: #000000;
+    display: block;
 }
 .a:hover {
 

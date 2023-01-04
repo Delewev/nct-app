@@ -38,5 +38,12 @@ class HomeController extends Controller
             'user' => $user
         ]);
     }
+    public function ments()
+    {
+        $user = Auth::user();
+        return view('ments',[
+            'user' => $user
+        ]);
+    }
 
 }

@@ -25,6 +25,7 @@ Route::post('settings', [SettingsController::class, 'dataupdate'])->name('update
 Route::get('/dataupdate', [HomeController::class, 'dataupdate'])->name('dataupdate');
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::get('/my', [HomeController::class, 'my'])->name('my');
+Route::get('/ments', [HomeController::class, 'ments'])->name('ments');
 
 
 Route::get('/', function () {
