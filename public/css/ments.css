@@ -1,8 +1,8 @@
 .ments{
+    margin-top: 20px;
     position: absolute;
     left: 330px;
     width: auto;
-
     border-radius: 10px;
     display: flex;
 }

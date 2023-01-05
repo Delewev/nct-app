@@ -20,12 +20,14 @@ class SettingsController extends Controller
         $editedUser = json_decode($request->user);
         $user = User::where('id', $editedUser->id)->first();
         $user->name = $editedUser->name;
+        $user->nameID = $editedUser->nameID;
         $user->lastname = $editedUser->lastname;
         $user->phone = $editedUser->phone;
         $user->person = $editedUser->person;
         $user->day = $editedUser->day;
         $user->month = $editedUser->month;
         $user->year = $editedUser->year;
+        $user->city = $editedUser->city;
         $user->save();
         return $user;
     }

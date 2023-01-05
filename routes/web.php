@@ -26,6 +26,8 @@ Route::get('/dataupdate', [HomeController::class, 'dataupdate'])->name('dataupda
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::get('/my', [HomeController::class, 'my'])->name('my');
 Route::get('/ments', [HomeController::class, 'ments'])->name('ments');
+Route::get('/team', [HomeController::class, 'team'])->name('team');
+Route::get('/team/nct', [HomeController::class, 'nct'])->name('nct');
 
 
 Route::get('/', function () {

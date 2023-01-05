@@ -5474,6 +5474,27 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   props: {
@@ -28505,42 +28526,76 @@ var render = function () {
         ]),
       ]),
       _vm._v(" "),
-      _c("div", { staticClass: "form-name-f" }, [
-        _vm._m(2),
-        _vm._v(" "),
+      _c("div", { staticClass: "form-name" }, [
         _c("div", [
-          _c("input", {
-            directives: [
-              {
-                name: "model",
-                rawName: "v-model",
-                value: _vm.thisUser.phone,
-                expression: "thisUser.phone",
+          _vm._m(2),
+          _vm._v(" "),
+          _c("div", [
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.thisUser.phone,
+                  expression: "thisUser.phone",
+                },
+              ],
+              attrs: {
+                type: "tel",
+                name: "phone",
+                placeholder: "+7 ___ ___-____",
+                "data-mask": "+7 ___ ___-____",
+                id: "phone",
               },
-            ],
-            attrs: {
-              type: "tel",
-              name: "phone",
-              placeholder: "+7 ___ ___-____",
-              "data-mask": "+7 ___ ___-____",
-              id: "phone",
-            },
-            domProps: { value: _vm.thisUser.phone },
-            on: {
-              input: function ($event) {
-                if ($event.target.composing) {
-                  return
-                }
-                _vm.$set(_vm.thisUser, "phone", $event.target.value)
+              domProps: { value: _vm.thisUser.phone },
+              on: {
+                input: function ($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.$set(_vm.thisUser, "phone", $event.target.value)
+                },
               },
-            },
-          }),
+            }),
+          ]),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "form-name-f" }, [
+          _vm._m(3),
+          _vm._v(" "),
+          _c("div", [
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.thisUser.nameID,
+                  expression: "thisUser.nameID",
+                },
+              ],
+              attrs: {
+                type: "text",
+                name: "nameID",
+                id: "nameID",
+                placeholder: "ID",
+              },
+              domProps: { value: _vm.thisUser.nameID },
+              on: {
+                input: function ($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.$set(_vm.thisUser, "nameID", $event.target.value)
+                },
+              },
+            }),
+          ]),
         ]),
       ]),
       _vm._v(" "),
       _c("div", { staticClass: "form-info" }, [
         _c("div", { staticClass: "form-pol" }, [
-          _vm._m(3),
+          _vm._m(4),
           _vm._v(" "),
           _c("div", [
             _c(
@@ -28583,7 +28638,7 @@ var render = function () {
         ]),
         _vm._v(" "),
         _c("div", { staticClass: "form-info-data" }, [
-          _vm._m(4),
+          _vm._m(5),
           _vm._v(" "),
           _c("div", { staticClass: "form-age" }, [
             _c("div", { staticClass: "form-age-inter" }, [
@@ -28815,6 +28870,49 @@ var render = function () {
           ]),
         ]),
       ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "form-team" }, [
+        _vm._m(6),
+        _vm._v(" "),
+        _c("div", [
+          _c(
+            "select",
+            {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.thisUser.city,
+                  expression: "thisUser.city",
+                },
+              ],
+              attrs: { name: "city", id: "city" },
+              on: {
+                change: function ($event) {
+                  var $$selectedVal = Array.prototype.filter
+                    .call($event.target.options, function (o) {
+                      return o.selected
+                    })
+                    .map(function (o) {
+                      var val = "_value" in o ? o._value : o.value
+                      return val
+                    })
+                  _vm.$set(
+                    _vm.thisUser,
+                    "city",
+                    $event.target.multiple ? $$selectedVal : $$selectedVal[0]
+                  )
+                },
+              },
+            },
+            [
+              _c("option", [_vm._v("Москва")]),
+              _vm._v(";\n                    "),
+              _c("option", [_vm._v("Казань")]),
+            ]
+          ),
+        ]),
+      ]),
     ]),
     _vm._v(" "),
     _c("div", [
@@ -28866,6 +28964,12 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
+    return _c("div", [_c("h6", [_vm._v("ID")])])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
     return _c("div", [_c("h6", [_vm._v("Пол")])])
   },
   function () {
@@ -28873,6 +28977,12 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", [_c("h6", [_vm._v("Дата рождения")])])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", [_c("h6", [_vm._v("Город")])])
   },
 ]
 render._withStripped = true

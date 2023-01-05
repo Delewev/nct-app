@@ -12,6 +12,12 @@
     left: 25px;
     margin-right: 10px;
 }
+.img-cheer{
+    height: 50px;
+    left: 25px;
+    margin-right: 10px;
+    display: block;
+}
 .bar{
     width: 230px;
     height: 100%;
@@ -55,6 +61,7 @@
         transform: translateX(10px);
     }
 }
+
 
 
 

@@ -13,15 +13,27 @@
                 <div class="form-name-f">
                     <div><h6>Фамилия</h6></div>
                     <div>
-                        <input type="text" name="lastname" id="lastname" v-model="thisUser.lastname" placeholder="Фамилия">
+                        <input type="text" name="lastname" id="lastname" v-model="thisUser.lastname"
+                               placeholder="Фамилия">
                     </div>
                 </div>
             </div>
-            <div class="form-name-f">
-                <div><h6>Номер Телефона</h6></div>
+            <div class="form-name">
                 <div>
+                    <div>
+                        <h6>Номер Телефона</h6>
+                    </div>
+                    <div>
                         <input type="tel" name="phone" placeholder="+7 ___ ___-____" data-mask="+7 ___ ___-____"
-                           id="phone" v-model="thisUser.phone">
+                               id="phone" v-model="thisUser.phone">
+                    </div>
+                </div>
+                <div class="form-name-f">
+                    <div><h6>ID</h6></div>
+                    <div>
+                        <input type="text" name="nameID" id="nameID" v-model="thisUser.nameID"
+                               placeholder="ID">
+                    </div>
                 </div>
             </div>
             <div class="form-info">
@@ -108,6 +120,15 @@
                             </select>
                         </div>
                     </div>
+                </div>
+            </div>
+            <div class="form-team">
+                <div><h6>Город</h6></div>
+                <div>
+                    <select name="city" id="city" v-model="thisUser.city">
+                        <option>Москва</option>;
+                        <option>Казань</option>
+                    </select>
                 </div>
             </div>
         </div>

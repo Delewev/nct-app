@@ -53,6 +53,24 @@
     background: #C2CDBC;
 
 }
+.my-photo-t{
+    display: flex;
+    width: 900px;
+
+}
+.logo{
+    margin-left: 10px;
+    margin-top: 20px;
+    width: 600px;
+
+}
+.logo img{
+    width: 200px;
+    height: 200px;
+    align-items: center;
+    display: block;
+    margin: auto;
+}
 
 .my-photo{
     margin-top: 20px;

@@ -45,5 +45,19 @@ class HomeController extends Controller
             'user' => $user
         ]);
     }
+    public function team()
+    {
+        $user = Auth::user();
+        return view('team',[
+            'user' => $user
+        ]);
+    }
+    public function nct()
+    {
+        $user = Auth::user();
+        return view('team.nct',[
+            'user' => $user
+        ]);
+    }
 
 }

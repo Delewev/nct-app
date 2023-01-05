@@ -20,6 +20,7 @@ class ChangeUserTable extends Migration
             $table->string('day')->nullable();
             $table->string('month')->nullable();
             $table->string('year')->nullable();
+            $table->string('city')->nullable();
         });
     }
 
