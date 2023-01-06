@@ -21,6 +21,8 @@ class ChangeUserTable extends Migration
             $table->string('month')->nullable();
             $table->string('year')->nullable();
             $table->string('city')->nullable();
+            $table->string('team')->nullable();
+            $table->string('cheer')->nullable();
         });
     }
 

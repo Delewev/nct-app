@@ -28,7 +28,27 @@
                 </div>
             </div>
             <div class="logo">
-                <img src="{{asset('img/cheer.png')}}" alt="">
+                @if($user->team == 'Fenomen-A' )
+                    <img src="{{asset('img/team/FA.png')}}" alt="">
+                @elseif($user->team == 'NCT' )
+                    <img src="{{asset('img/team/1_NCTnew.png')}}" alt="">
+                @elseif($user->team == 'G-FAME' )
+                    <img src="{{asset('img/team/gfam.png')}}" alt="">
+                @elseif($user->team == 'Titans' )
+                    <img src="{{asset('img/team/titans.png')}}" alt="">
+                @elseif($user->team == 'Zachet' )
+                    <img src="{{asset('img/team/zachet.png')}}" alt="">
+                @elseif($user->team == 'Husky' )
+                    <img src="{{asset('img/team/husky.png')}}" alt="">
+                @elseif($user->team == 'Insight' )
+                    <img src="{{asset('img/team/insight.png')}}" alt="">
+                @elseif($user->team == 'NO-NAME' )
+                    <img src="{{asset('img/team/no-name.png')}}" alt="">
+
+                @elseif($user->team == null )
+                    <img src="{{asset('img/cheer.png')}}" alt="">
+                @endif
+
             </div>
         </div>
     </div>

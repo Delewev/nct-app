@@ -5,8 +5,23 @@
     width: 700px;
     height: auto;
     border-radius: 10px;
+}
+.team-1{
     display: flex;
-
+}
+.cheer-team{
+    margin-left: 300px;
+    width: 600px;
+    height: 70px;
+}
+.cheer-team img{
+    width: auto;
+    height: 60px;
+}
+.cheer-team img:hover{
+    width: auto;
+    height: 70px;
+    transition: 0.5s
 }
 .ul{
     list-style-type: none;

@@ -139,10 +139,24 @@ h6{
     margin-left: 5px;
 }
 .form-team {
+    display: flex;
     width: 100px;
     height: 50px;
     margin-left: 10px;
+}
+.form-team-d{
+    margin-right: 30px;
 
+}
+.form-team-d select{
+    border-radius: 8px;
+    height: 30px;
+    width: 100px;
+    background-color: #EBEDF0;
+    border: 1px solid #D5D5D7;
+    outline: 0 !important;
+    padding-left: 2px;
+    font-weight: 100 ;
 }
 
 /*.btn{*/

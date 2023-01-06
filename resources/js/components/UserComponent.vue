@@ -123,12 +123,48 @@
                 </div>
             </div>
             <div class="form-team">
-                <div><h6>Город</h6></div>
-                <div>
-                    <select name="city" id="city" v-model="thisUser.city">
-                        <option>Москва</option>;
-                        <option>Казань</option>
-                    </select>
+                <div class="form-team-d">
+                    <div><h6>Город</h6></div>
+                    <div>
+                        <select name="city" id="city" v-model="thisUser.city">
+                            <option>Москва</option>
+                            <option>Казань</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-team-d">
+                    <div><h6>Команда</h6></div>
+                    <div>
+                        <select name="team" id="team" v-model="thisUser.team">
+                            <option>NCT</option>
+                            <option>G-FAME</option>
+                            <option>Zachet</option>
+                            <option>Fenomen-A</option>
+                            <option>NO-NAME</option>
+                            <option>Titans</option>
+                            <option>Grand Arena</option>
+                            <option>NO LIMIT</option>
+                            <option>Power</option>
+                            <option>Destiny</option>
+                            <option>Groove</option>
+                            <option>Insight</option>
+                            <option>Bargers</option>
+                            <option>Фаворит</option>
+                            <option>Full Drive</option>
+                            <option>Кодекс</option>
+                            <option>United</option>
+                            <option>Husky</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-team-d">
+                    <div><h6>Задача</h6></div>
+                    <div>
+                        <select name="cheer" id="cheer" v-model="thisUser.cheer">
+                            <option>База</option>
+                            <option>Флаер</option>
+                        </select>
+                    </div>
                 </div>
             </div>
         </div>

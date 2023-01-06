@@ -9,11 +9,15 @@
 
 
 }
+.table-a a{
+    color: #1a202c;
+    text-decoration: none;
+}
 .team-icon{
    display: flex;
 }
 .img-1{
-    width: 70px;
+    width: auto;
     height: 70px;
     margin-right: 20px;
 

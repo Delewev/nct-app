@@ -5495,6 +5495,42 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   props: {
@@ -28872,45 +28908,165 @@ var render = function () {
       ]),
       _vm._v(" "),
       _c("div", { staticClass: "form-team" }, [
-        _vm._m(6),
-        _vm._v(" "),
-        _c("div", [
-          _c(
-            "select",
-            {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.thisUser.city,
-                  expression: "thisUser.city",
-                },
-              ],
-              attrs: { name: "city", id: "city" },
-              on: {
-                change: function ($event) {
-                  var $$selectedVal = Array.prototype.filter
-                    .call($event.target.options, function (o) {
-                      return o.selected
-                    })
-                    .map(function (o) {
-                      var val = "_value" in o ? o._value : o.value
-                      return val
-                    })
-                  _vm.$set(
-                    _vm.thisUser,
-                    "city",
-                    $event.target.multiple ? $$selectedVal : $$selectedVal[0]
-                  )
+        _c("div", { staticClass: "form-team-d" }, [
+          _vm._m(6),
+          _vm._v(" "),
+          _c("div", [
+            _c(
+              "select",
+              {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.thisUser.city,
+                    expression: "thisUser.city",
+                  },
+                ],
+                attrs: { name: "city", id: "city" },
+                on: {
+                  change: function ($event) {
+                    var $$selectedVal = Array.prototype.filter
+                      .call($event.target.options, function (o) {
+                        return o.selected
+                      })
+                      .map(function (o) {
+                        var val = "_value" in o ? o._value : o.value
+                        return val
+                      })
+                    _vm.$set(
+                      _vm.thisUser,
+                      "city",
+                      $event.target.multiple ? $$selectedVal : $$selectedVal[0]
+                    )
+                  },
                 },
               },
-            },
-            [
-              _c("option", [_vm._v("Москва")]),
-              _vm._v(";\n                    "),
-              _c("option", [_vm._v("Казань")]),
-            ]
-          ),
+              [
+                _c("option", [_vm._v("Москва")]),
+                _vm._v(" "),
+                _c("option", [_vm._v("Казань")]),
+              ]
+            ),
+          ]),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "form-team-d" }, [
+          _vm._m(7),
+          _vm._v(" "),
+          _c("div", [
+            _c(
+              "select",
+              {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.thisUser.team,
+                    expression: "thisUser.team",
+                  },
+                ],
+                attrs: { name: "team", id: "team" },
+                on: {
+                  change: function ($event) {
+                    var $$selectedVal = Array.prototype.filter
+                      .call($event.target.options, function (o) {
+                        return o.selected
+                      })
+                      .map(function (o) {
+                        var val = "_value" in o ? o._value : o.value
+                        return val
+                      })
+                    _vm.$set(
+                      _vm.thisUser,
+                      "team",
+                      $event.target.multiple ? $$selectedVal : $$selectedVal[0]
+                    )
+                  },
+                },
+              },
+              [
+                _c("option", [_vm._v("NCT")]),
+                _vm._v(" "),
+                _c("option", [_vm._v("G-FAME")]),
+                _vm._v(" "),
+                _c("option", [_vm._v("Zachet")]),
+                _vm._v(" "),
+                _c("option", [_vm._v("Fenomen-A")]),
+                _vm._v(" "),
+                _c("option", [_vm._v("NO-NAME")]),
+                _vm._v(" "),
+                _c("option", [_vm._v("Titans")]),
+                _vm._v(" "),
+                _c("option", [_vm._v("Grand Arena")]),
+                _vm._v(" "),
+                _c("option", [_vm._v("NO LIMIT")]),
+                _vm._v(" "),
+                _c("option", [_vm._v("Power")]),
+                _vm._v(" "),
+                _c("option", [_vm._v("Destiny")]),
+                _vm._v(" "),
+                _c("option", [_vm._v("Groove")]),
+                _vm._v(" "),
+                _c("option", [_vm._v("Insight")]),
+                _vm._v(" "),
+                _c("option", [_vm._v("Bargers")]),
+                _vm._v(" "),
+                _c("option", [_vm._v("Фаворит")]),
+                _vm._v(" "),
+                _c("option", [_vm._v("Full Drive")]),
+                _vm._v(" "),
+                _c("option", [_vm._v("Кодекс")]),
+                _vm._v(" "),
+                _c("option", [_vm._v("United")]),
+                _vm._v(" "),
+                _c("option", [_vm._v("Husky")]),
+              ]
+            ),
+          ]),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "form-team-d" }, [
+          _vm._m(8),
+          _vm._v(" "),
+          _c("div", [
+            _c(
+              "select",
+              {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.thisUser.cheer,
+                    expression: "thisUser.cheer",
+                  },
+                ],
+                attrs: { name: "cheer", id: "cheer" },
+                on: {
+                  change: function ($event) {
+                    var $$selectedVal = Array.prototype.filter
+                      .call($event.target.options, function (o) {
+                        return o.selected
+                      })
+                      .map(function (o) {
+                        var val = "_value" in o ? o._value : o.value
+                        return val
+                      })
+                    _vm.$set(
+                      _vm.thisUser,
+                      "cheer",
+                      $event.target.multiple ? $$selectedVal : $$selectedVal[0]
+                    )
+                  },
+                },
+              },
+              [
+                _c("option", [_vm._v("База")]),
+                _vm._v(" "),
+                _c("option", [_vm._v("Флаер")]),
+              ]
+            ),
+          ]),
         ]),
       ]),
     ]),
@@ -28983,6 +29139,18 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", [_c("h6", [_vm._v("Город")])])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", [_c("h6", [_vm._v("Команда")])])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", [_c("h6", [_vm._v("Задача")])])
   },
 ]
 render._withStripped = true

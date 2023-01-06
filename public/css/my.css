@@ -65,11 +65,12 @@
 
 }
 .logo img{
+    margin-top: 60px;
     width: 200px;
-    height: 200px;
+    height: auto;
     align-items: center;
     display: block;
-    margin: auto;
+    margin-left: 100px;
 }
 
 .my-photo{

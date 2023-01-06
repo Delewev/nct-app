@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Resources\UserResource;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -28,9 +29,14 @@ class SettingsController extends Controller
         $user->month = $editedUser->month;
         $user->year = $editedUser->year;
         $user->city = $editedUser->city;
+        $user->team = $editedUser->team;
+        $user->cheer = $editedUser->cheer;
         $user->save();
         return $user;
     }
 
-
+    public function users()
+    {
+        return view('team.nct', ['users' => User::all()]);
+    }
 }
