@@ -2,6 +2,7 @@
     position: absolute;
     left: 330px;
     width: 300px;
+    height: auto;
 }
 .my-name{
     margin-top: 40px;
@@ -15,6 +16,11 @@
     align-items: center;
 
 
+}
+.upload-component{
+    margin-top: 40px;
+    width: 900px;
+    height: 100px;
 }
 .avotar{
     width: 90px; height: 90px;

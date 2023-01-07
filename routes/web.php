@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PhotoController;
 use App\Http\Controllers\TeamController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SettingsController;
@@ -29,8 +30,13 @@ Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::get('/my', [HomeController::class, 'my'])->name('my');
 Route::get('/ments', [HomeController::class, 'ments'])->name('ments');
 Route::get('/team', [HomeController::class, 'team'])->name('team');
+Route::post('/img/upload', [HomeController::class, 'upload'])->name('image.upload');
 
+// Photo
+Route::resource('news', 'App\Http\Controllers\PhotoController');
+Route::get('photo', [PhotoController::class, 'index'])->name('photo');
 
+// Команды
 Route::get('/team/nct', [TeamController::class, 'nct'])->name('nct');
 Route::get('/team/fa', [TeamController::class, 'fa'])->name('fa');
 Route::get('/team/zachet', [TeamController::class, 'zachet'])->name('zachet');

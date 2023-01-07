@@ -19,12 +19,13 @@
                         <img class="img-icon" src="{{asset('img/Icon/icon-photo.png')}}" alt="">Фото
                     </a>
                 </div>
+
                 <div class="photo">
                     <img src="{{asset('img/1.jpg')}}" alt="">
                 </div>
                 <div class="send">
-                    <div class="send-photo" id="send-photo"><a href="">Загрузить фото</a></div>
-                    <div class="send-photo"><a href="">Посмотреть все</a></div>
+                    <div class="send-photo" id="send-photo"><a href="{{url('http://127.0.0.1:8000/news/create')}}">Загрузить фото</a></div>
+                    <div class="send-photo"><a href="{{url('http://127.0.0.1:8000/news')}}">Посмотреть все</a></div>
                 </div>
             </div>
             <div class="logo">
@@ -51,5 +52,9 @@
 
             </div>
         </div>
+        <div class="upload-component">
+        <upload-component></upload-component>
+        </div>
     </div>
+
 @endsection
