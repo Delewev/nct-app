@@ -24,14 +24,14 @@
                         <h6>Номер Телефона</h6>
                     </div>
                     <div>
-                        <input type="tel" name="phone" placeholder="+7 ___ ___-____" data-mask="+7 ___ ___-____"
+                        <input type="tel" name="phone"
                                id="phone" v-model="thisUser.phone">
                     </div>
                 </div>
                 <div class="form-name-f">
                     <div><h6>ID</h6></div>
                     <div>
-                        <input type="text" name="nameID" id="nameID" v-model="thisUser.nameID"
+                        <input type="text" name="slug" id="slug" v-model="thisUser.slug"
                                placeholder="ID">
                     </div>
                 </div>

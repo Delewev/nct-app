@@ -11,9 +11,9 @@
 <body>
 
 <div class="container">
-    @foreach($news as $item)
+    @foreach($photo as $item)
         <div class="col-8">
-            <p><img src="{{ Storage::url('image/news/origin/'.$item->image) }}" alt=""></p>
+            <p><img src="{{ Storage::url('image/news/origin/'.$item->image) }}" alt="">{{$item->user_id}}</p>
         </div>
     @endforeach
 </div>

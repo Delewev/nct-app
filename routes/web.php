@@ -27,14 +27,14 @@ Route::get('/home/settings', [SettingsController::class, 'index'])->name('settin
 Route::post('settings', [SettingsController::class, 'dataupdate'])->name('update.settings');
 Route::get('/dataupdate', [HomeController::class, 'dataupdate'])->name('dataupdate');
 Route::get('/home', [HomeController::class, 'index'])->name('home');
-Route::get('/my', [HomeController::class, 'my'])->name('my');
+Route::get('my', [HomeController::class, 'my'])->name('my');
 Route::get('/ments', [HomeController::class, 'ments'])->name('ments');
 Route::get('/team', [HomeController::class, 'team'])->name('team');
 Route::post('/img/upload', [HomeController::class, 'upload'])->name('image.upload');
 
 // Photo
 Route::resource('news', 'App\Http\Controllers\PhotoController');
-Route::get('photo', [PhotoController::class, 'index'])->name('photo');
+Route::get('photo', [PhotoController::class, 'photo'])->name('photo');
 
 // Команды
 Route::get('/team/nct', [TeamController::class, 'nct'])->name('nct');

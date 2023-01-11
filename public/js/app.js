@@ -28953,13 +28953,7 @@ var render = function () {
                   expression: "thisUser.phone",
                 },
               ],
-              attrs: {
-                type: "tel",
-                name: "phone",
-                placeholder: "+7 ___ ___-____",
-                "data-mask": "+7 ___ ___-____",
-                id: "phone",
-              },
+              attrs: { type: "tel", name: "phone", id: "phone" },
               domProps: { value: _vm.thisUser.phone },
               on: {
                 input: function ($event) {
@@ -28982,23 +28976,23 @@ var render = function () {
                 {
                   name: "model",
                   rawName: "v-model",
-                  value: _vm.thisUser.nameID,
-                  expression: "thisUser.nameID",
+                  value: _vm.thisUser.slug,
+                  expression: "thisUser.slug",
                 },
               ],
               attrs: {
                 type: "text",
-                name: "nameID",
-                id: "nameID",
+                name: "slug",
+                id: "slug",
                 placeholder: "ID",
               },
-              domProps: { value: _vm.thisUser.nameID },
+              domProps: { value: _vm.thisUser.slug },
               on: {
                 input: function ($event) {
                   if ($event.target.composing) {
                     return
                   }
-                  _vm.$set(_vm.thisUser, "nameID", $event.target.value)
+                  _vm.$set(_vm.thisUser, "slug", $event.target.value)
                 },
               },
             }),

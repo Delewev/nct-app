@@ -22,10 +22,10 @@
             @foreach($users as $user)
                 <tbody>
                 <tr>
-                    @if($user->nameID == null)
+                    @if($user->slug == null)
                         <td><a href="{{route('settings')}}">Указать<a></td>
                     @else
-                        <td><a href="{{route('my')}}">{{ $user->nameID }}</a></td>
+                        <td><a href="{{route('my')}}">{{ $user->slug }}</a></td>
                     @endif
                     <td>{{$user->name}}</td>
                     @if($user->lastname == null)

@@ -6,6 +6,7 @@ use App\Models\Photo;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
 use Intervention\Image\Facades\Image;
 
@@ -13,7 +14,7 @@ class PhotoController extends Controller
 {
     public function index()
     {
-        return view('news.index',['news' => Photo::all()]);
+        return view('news.index',['photo' => Photo::all()]);
     }
 
     public function create()
@@ -43,10 +44,20 @@ class PhotoController extends Controller
         return redirect()->route('news.index');
     }
 
-    public function photo()
+    public function photo($id)
     {
-        return view('my', ['users' => Photo::query()
-            ->where('image')->get()]);
+        $photo = Photo::query()->find($id)->where('user_id', '=', $id)->get();
+        return view('news.index', ['photo' => $photo]);
+    }
+
+    public function user()
+    {
+        $photos = Photo::query()->where('user_id', $id)->get();
+        $user = User::with('photos')->where('id', $id)->first();
+        return view('news.index', [
+            'photos' => $photos,
+            'user' => $user
+        ]);
     }
 
 }
