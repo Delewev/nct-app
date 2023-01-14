@@ -27,20 +27,43 @@ Route::get('/home/settings', [SettingsController::class, 'index'])->name('settin
 Route::post('settings', [SettingsController::class, 'dataupdate'])->name('update.settings');
 Route::get('/dataupdate', [HomeController::class, 'dataupdate'])->name('dataupdate');
 Route::get('/home', [HomeController::class, 'index'])->name('home');
-Route::get('my', [HomeController::class, 'my'])->name('my');
 Route::get('/ments', [HomeController::class, 'ments'])->name('ments');
+//Route::get('my', [HomeController::class, 'my'])->name('my');
+Route::get('my/{slug?}', [HomeController::class, 'mys'])->name('slug');
+Route::get('cheer/{slug?}', [SettingsController::class, 'you'])->name('you');
 Route::get('/team', [HomeController::class, 'team'])->name('team');
-Route::post('/img/upload', [HomeController::class, 'upload'])->name('image.upload');
 
 // Photo
 Route::resource('news', 'App\Http\Controllers\PhotoController');
-Route::get('photo', [PhotoController::class, 'photo'])->name('photo');
+Route::get('photo/{slug?}', [PhotoController::class, 'show'])->name('photo');
+//Route::get('photo', function () {
+//    $users = \App\Models\User::all();
+//    foreach ($users as $user){
+//        echo 'name:'.$user['name'].'<br>';
+//        echo 'photo:';
+//        foreach ($user->photos as $photo){
+//            echo $photo['image'].'<br>';
+//        }
+//    }
+//});
+
 
 // Команды
+Route::get('/team/cheer', [TeamController::class, 'cheer'])->name('cheer');
 Route::get('/team/nct', [TeamController::class, 'nct'])->name('nct');
 Route::get('/team/fa', [TeamController::class, 'fa'])->name('fa');
 Route::get('/team/zachet', [TeamController::class, 'zachet'])->name('zachet');
 Route::get('/team/g-fam', [TeamController::class, 'gfam'])->name('gfam');
+Route::get('/team/no-name', [TeamController::class, 'noname'])->name('no-name');
+Route::get('/team/titans', [TeamController::class, 'titans'])->name('titans');
+Route::get('/team/grand-arena', [TeamController::class, 'grand'])->name('grand');
+Route::get('/team/no-limit', [TeamController::class, 'nolimit'])->name('nolimit');
+Route::get('/team/power', [TeamController::class, 'power'])->name('power');
+Route::get('/team/destiny', [TeamController::class, 'destiny'])->name('destiny');
+Route::get('/team/groove', [TeamController::class, 'groove'])->name('groove');
+Route::get('/team/insight', [TeamController::class, 'insight'])->name('insight');
+Route::get('/team/favorit', [TeamController::class, 'favorit'])->name('favorit');
+Route::get('/team/kodex', [TeamController::class, 'kodex'])->name('kodex');
 
 
 Route::get('/', function () {

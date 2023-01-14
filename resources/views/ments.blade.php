@@ -9,6 +9,5 @@
        <div class="fest">
            <a href=""><img src="{{asset('img/fest.png')}}" alt=""></a>
        </div>
-
    </div>
 @endsection

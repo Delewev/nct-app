@@ -4,10 +4,10 @@
     <link rel="stylesheet" href="{{asset('css/teams.css')}}">
     <link href="https://fonts.cdnfonts.com/css/cooper-black-cyrillic" rel="stylesheet">
     <div class="table-1">
-        <div class="team-icon"><img src="{{asset('img/team/gfam.png')}}" alt="" class="img-1">
-            <div class="table-a"><h2>G-FAM</h2><h4><a
-                        href="https://www.google.com/maps/place/%D0%A7%D0%B5%D0%B1%D0%BE%D0%BA%D1%81%D0%B0%D1%80%D1%8B,+%D0%A7%D1%83%D0%B2%D0%B0%D1%88%D1%81%D0%BA%D0%B0%D1%8F+%D0%A0%D0%B5%D1%81%D0%BF./data=!4m2!3m1!1s0x415a37f37d16e915:0x7174067761ec11d9?sa=X&ved=2ahUKEwj_1ov8lLP8AhXtxIsKHctYBVcQ8gF6BQiGARAB">
-                        Чебоксары</a></h4></div>
+        <div class="team-icon"><img src="{{asset('img/team/team-icon/grand.png')}}" alt="" class="img-1">
+            <div class="table-a"><h2>Grand Arena</h2><h4><a
+                        href="https://www.google.com/maps/place/%D0%9D%D0%BE%D0%B2%D0%BE%D1%81%D0%B8%D0%B1%D0%B8%D1%80%D1%81%D0%BA,+%D0%9D%D0%BE%D0%B2%D0%BE%D1%81%D0%B8%D0%B1%D0%B8%D1%80%D1%81%D0%BA%D0%B0%D1%8F+%D0%BE%D0%B1%D0%BB./@54.9700492,82.6692221,10z/data=!3m1!4b1!4m5!3m4!1s0x42dfe5e190cc4d97:0x9b3a0673e1d3e985!8m2!3d54.9832693!4d82.8963831">
+                        Новосибирскг</a></h4></div>
         </div>
         <table class="table">
             <thead>
@@ -24,11 +24,7 @@
             @foreach($users as $user)
                 <tbody>
                 <tr>
-                    @if($user->slug == null)
-                        <td><a href="{{route('settings')}}">Указать</a>></td>
-                    @else
-                        <td><a href="{{route('you', ['slug'=>$user->slug])}}">{{ $user->slug }}</a></td>
-                    @endif
+                    <td><a href="{{route('you', ['slug'=>$user->slug])}}">{{ $user->slug }}</a></td>
                     <td>{{$user->name}}</td>
                     @if($user->lastname == null)
                         <td><a href="{{route('settings')}}">Указать</a></td>
@@ -55,7 +51,6 @@
                     @else
                         <td>{{$user->cheer}}</td>
                     @endif
-
                 </tr>
                 </tbody>
             @endforeach

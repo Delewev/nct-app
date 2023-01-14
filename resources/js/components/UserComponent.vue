@@ -142,18 +142,17 @@
                             <option>Fenomen-A</option>
                             <option>NO-NAME</option>
                             <option>Titans</option>
-                            <option>Grand Arena</option>
+                            <option>Grand-Arena</option>
                             <option>NO-LIMIT</option>
                             <option>Power</option>
                             <option>Destiny</option>
                             <option>Groove</option>
                             <option>Insight</option>
-                            <option>Bargers</option>
                             <option>Фаворит</option>
-                            <option>Full-Drive</option>
                             <option>Кодекс</option>
                             <option>United</option>
                             <option>Husky</option>
+                            <option>Другое</option>
                         </select>
                     </div>
                 </div>

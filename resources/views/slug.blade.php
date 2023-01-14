@@ -9,7 +9,7 @@
 
             </div>
             <div class="setting">
-                <a href="{{route('settings')}}" class="setting-a">Редактировать профиль</a>
+                <a href="" class="setting-a">Отправить сообщение</a>
             </div>
         </div>
         <div class="my-photo-t">
@@ -25,11 +25,6 @@
                         @endforeach
                     </div>
                 <div class="send">
-                    <form method="post" action="{{ route('news.store') }}" enctype="multipart/form-data">
-                    <div class="send-photo" id="send-photo"><a href="{{url('http://127.0.0.1:8000/news/create')}}">Загрузить
-                            фото</a></div>
-                    </form>
-
                     <div class="send-photo"><a href="{{url('http://127.0.0.1:8000/news')}}">Посмотреть все</a></div>
                 </div>
             </div>
@@ -50,16 +45,8 @@
                     <img src="{{asset('img/team/insight.png')}}" alt="">
                 @elseif($user->team == 'NO-NAME' )
                     <img src="{{asset('img/team/no-name.png')}}" alt="">
-                @elseif($user->team == 'NO-LIMIT' )
-                    <img src="{{asset('img/team/team-icon/no-limit.jpg.png')}}" alt="">
-                @elseif($user->team == 'Grand-Arena' )
-                    <img src="{{asset('img/team/team-icon/grand.png')}}" alt="">
-                @elseif($user->team == 'Destiny' )
-                    <img src="{{asset('img/team/team-icon/destiny.jpg')}}" alt="">
 
                 @elseif($user->team == null )
-                    <img src="{{asset('img/cheer.png')}}" alt="">
-                @elseif($user->team == 'Другое')
                     <img src="{{asset('img/cheer.png')}}" alt="">
                 @endif
 

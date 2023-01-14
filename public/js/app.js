@@ -5660,7 +5660,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   props: {
@@ -29369,7 +29368,7 @@ var render = function () {
                 _vm._v(" "),
                 _c("option", [_vm._v("Titans")]),
                 _vm._v(" "),
-                _c("option", [_vm._v("Grand Arena")]),
+                _c("option", [_vm._v("Grand-Arena")]),
                 _vm._v(" "),
                 _c("option", [_vm._v("NO-LIMIT")]),
                 _vm._v(" "),
@@ -29381,17 +29380,15 @@ var render = function () {
                 _vm._v(" "),
                 _c("option", [_vm._v("Insight")]),
                 _vm._v(" "),
-                _c("option", [_vm._v("Bargers")]),
-                _vm._v(" "),
                 _c("option", [_vm._v("Фаворит")]),
-                _vm._v(" "),
-                _c("option", [_vm._v("Full-Drive")]),
                 _vm._v(" "),
                 _c("option", [_vm._v("Кодекс")]),
                 _vm._v(" "),
                 _c("option", [_vm._v("United")]),
                 _vm._v(" "),
                 _c("option", [_vm._v("Husky")]),
+                _vm._v(" "),
+                _c("option", [_vm._v("Другое")]),
               ]
             ),
           ]),

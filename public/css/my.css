@@ -125,11 +125,15 @@
 }
 .photo{
     margin-top: 10px;
+    display: flex;
+    border-radius: 10px 0px 0px 10px ;
 }
 .photo img{
-    width: 180px;
-    height: 100%;
-    border-radius: 10px 0px 0px 10px ;
+    width: 140px;
+    margin-right: 5px;
+    height: auto;
+    border-radius: 10px 10px 10px 10px ;
+    display: flex;
 }
 .send{
     display: flex;

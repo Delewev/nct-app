@@ -4,10 +4,10 @@
     <link rel="stylesheet" href="{{asset('css/teams.css')}}">
     <link href="https://fonts.cdnfonts.com/css/cooper-black-cyrillic" rel="stylesheet">
     <div class="table-1">
-        <div class="team-icon"><img src="{{asset('img/team/gfam.png')}}" alt="" class="img-1">
-            <div class="table-a"><h2>G-FAM</h2><h4><a
-                        href="https://www.google.com/maps/place/%D0%A7%D0%B5%D0%B1%D0%BE%D0%BA%D1%81%D0%B0%D1%80%D1%8B,+%D0%A7%D1%83%D0%B2%D0%B0%D1%88%D1%81%D0%BA%D0%B0%D1%8F+%D0%A0%D0%B5%D1%81%D0%BF./data=!4m2!3m1!1s0x415a37f37d16e915:0x7174067761ec11d9?sa=X&ved=2ahUKEwj_1ov8lLP8AhXtxIsKHctYBVcQ8gF6BQiGARAB">
-                        Чебоксары</a></h4></div>
+        <div class="team-icon"><img src="{{asset('img/team/team-icon/favorite.jpg')}}" alt="" class="img-1">
+            <div class="table-a"><h2>Фаворит</h2><h4><a
+                        href="https://www.google.com/maps/place/%D0%A1%D0%B0%D0%BC%D0%B0%D1%80%D0%B0,+%D0%A1%D0%B0%D0%BC%D0%B0%D1%80%D1%81%D0%BA%D0%B0%D1%8F+%D0%BE%D0%B1%D0%BB./@53.2609904,49.9178929,10z/data=!3m1!4b1!4m5!3m4!1s0x416618e22bd879d3:0xba95cda9bb3a030b!8m2!3d53.203772!4d50.1606382">
+                        Самара</a></h4></div>
         </div>
         <table class="table">
             <thead>

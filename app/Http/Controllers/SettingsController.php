@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Resources\UserResource;
+use App\Models\Photo;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -38,5 +39,15 @@ class SettingsController extends Controller
     public function users()
     {
         return view('team.nct', ['users' => User::all()]);
+    }
+    public function photos()
+    {
+        $photo = Photo::all();
+        return view('my', ['photo' => $photo]);
+    }
+
+    public function you(string $slug){
+        return view('slug', ['user' => User::where('slug', $slug)->first(),
+            'users' => Auth::user()]);
     }
 }

@@ -12,6 +12,12 @@ use Intervention\Image\Facades\Image;
 
 class PhotoController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function index()
     {
         return view('news.index',['photo' => Photo::all()]);
@@ -41,23 +47,14 @@ class PhotoController extends Controller
         $user->user_id = request()->user()->id;
         $user->save();
 
-        return redirect()->route('news.index');
+        return redirect()->route('my');
     }
 
-    public function photo($id)
+    public function show(string $slug)
     {
-        $photo = Photo::query()->find($id)->where('user_id', '=', $id)->get();
-        return view('news.index', ['photo' => $photo]);
+        return view('photos', ['users' => User::where('slug', $slug)->first(),
+            'user' => Auth::user()]);
     }
 
-    public function user()
-    {
-        $photos = Photo::query()->where('user_id', $id)->get();
-        $user = User::with('photos')->where('id', $id)->first();
-        return view('news.index', [
-            'photos' => $photos,
-            'user' => $user
-        ]);
-    }
 
 }

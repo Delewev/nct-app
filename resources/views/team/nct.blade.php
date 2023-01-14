@@ -24,38 +24,33 @@
             @foreach($users as $user)
                 <tbody>
                 <tr>
-                    @if($user->slug == null)
-                        <td><a href="{{route('settings')}}">Указать<a></td>
-                    @else
-                        <td><a href="{{route('my')}}">{{ $user->slug }}</a></td>
-                    @endif
+                    <td><a href="{{route('you', ['slug'=>$user->slug])}}">{{ $user->slug }}</a></td>
                     <td>{{$user->name}}</td>
                     @if($user->lastname == null)
-                        <td><a href="{{route('settings')}}">Указать<a></td>
+                        <td><a href="{{route('settings')}}">Указать</a></td>
                     @else
                         <td>{{ $user->lastname }}</td>
                     @endif
-                        @if($user->city == null)
-                            <td><a href="{{route('settings')}}">Указать<a></td>
-                        @else
-                            <td>{{ $user->city }}</td>
-                        @endif
-                        @if($user->year == null)
-                            <td><a href="{{route('settings')}}">Указать<a></td>
-                        @else
-                            <td>{{$user->day}} {{$user->month}} {{$user->year}}г</td>
-                        @endif
-                        @if($user->phone == null)
-                            <td><a href="{{route('settings')}}">Указать<a></td>
-                        @else
-                            <td>{{$user->phone}}</td>
-                        @endif
-                        @if($user->cheer == null)
-                            <td><a href="{{route('settings')}}">Указать<a></td>
-                        @else
-                            <td>{{$user->cheer}}</td>
-                        @endif
-
+                    @if($user->city == null)
+                        <td><a href="{{route('settings')}}">Указать</a></td>
+                    @else
+                        <td>{{ $user->city }}</td>
+                    @endif
+                    @if($user->year == null)
+                        <td><a href="{{route('settings')}}">Указать</a></td>
+                    @else
+                        <td>{{$user->day}} {{$user->month}} {{$user->year}}г</td>
+                    @endif
+                    @if($user->phone == null)
+                        <td><a href="{{route('settings')}}">Указать</a></td>
+                    @else
+                        <td>{{$user->phone}}</td>
+                    @endif
+                    @if($user->cheer == null)
+                        <td><a href="{{route('settings')}}">Указать</a></td>
+                    @else
+                        <td>{{$user->cheer}}</td>
+                    @endif
                 </tr>
                 </tbody>
             @endforeach
