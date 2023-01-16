@@ -47,7 +47,7 @@ class PhotoController extends Controller
         $user->user_id = request()->user()->id;
         $user->save();
 
-        return redirect()->route('my');
+        return redirect()->route('news.index');
     }
 
     public function show(string $slug)

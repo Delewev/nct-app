@@ -19,18 +19,18 @@
                         <img class="img-icon" src="{{asset('img/Icon/icon-photo.png')}}" alt="">Фото
                     </a>
                 </div>
-                    <div class="photo">
-                        @foreach($user->photos as $photo)
+                <div class="photo">
+                    @foreach($user->photos as $photo)
                         <img src="{{ Storage::url('image/news/origin/'.$photo->image) }}" alt="">
-                        @endforeach
-                    </div>
+                    @endforeach
+                </div>
                 <div class="send">
                     <form method="post" action="{{ route('news.store') }}" enctype="multipart/form-data">
-                    <div class="send-photo" id="send-photo"><a href="{{url('http://127.0.0.1:8000/news/create')}}">Загрузить
-                            фото</a></div>
+                        <div class="send-photo" id="send-photo"><a href="{{url('http://127.0.0.1:8000/news/create')}}">Загрузить
+                                фото</a></div>
                     </form>
 
-                    <div class="send-photo"><a href="{{url('http://127.0.0.1:8000/news')}}">Посмотреть все</a></div>
+                    <div class="send-photo"><a href="{{route('photo', ['slug'=>$user->slug])}}">Посмотреть все</a></div>
                 </div>
             </div>
             <div class="logo">

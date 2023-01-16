@@ -1,16 +1,16 @@
 @extends('layouts.app')
 @section('content')
     @include('components.menu')
-    <link rel="stylesheet" href="{{asset('css/my.css')}}">
+    <link rel="stylesheet" href="{{asset('css/slug.css')}}">
     <div class="my">
         <div class="my-name">
             <img class="avotar" src="{{asset('img/Icon/icon1.png')}}" alt="">
             <div class="name"><h4>{{$user->name}} {{$user->lastname}} </h4>
 
             </div>
-            <div class="setting">
-                <a href="" class="setting-a">Отправить сообщение</a>
-            </div>
+                <div class="setting">
+                    <button class="setting-a" >Сообщение</button>
+                </div>
         </div>
         <div class="my-photo-t">
             <div class="my-photo">
@@ -19,11 +19,11 @@
                         <img class="img-icon" src="{{asset('img/Icon/icon-photo.png')}}" alt="">Фото
                     </a>
                 </div>
-                    <div class="photo">
-                        @foreach($user->photos as $photo)
+                <div class="photo">
+                    @foreach($user->photos as $photo)
                         <img src="{{ Storage::url('image/news/origin/'.$photo->image) }}" alt="">
-                        @endforeach
-                    </div>
+                    @endforeach
+                </div>
                 <div class="send">
                     <div class="send-photo"><a href="{{url('http://127.0.0.1:8000/news')}}">Посмотреть все</a></div>
                 </div>

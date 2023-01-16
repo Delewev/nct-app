@@ -13,7 +13,7 @@
 <div class="container">
     <div class="col-8">
         <h1>Добавить новость</h1>
-        <form method="post" action="{{ route('news.store') }}" enctype="multipart/form-data">
+        <form method="post" action="{{route('news.store')}}" enctype="multipart/form-data">
             @csrf
             <div class="form-group">
                 <label for="image">Картинка для новости</label>
