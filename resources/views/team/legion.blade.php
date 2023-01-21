@@ -4,10 +4,10 @@
     <link rel="stylesheet" href="{{asset('css/teams.css')}}">
     <link href="https://fonts.cdnfonts.com/css/cooper-black-cyrillic" rel="stylesheet">
     <div class="table-1">
-        <div class="team-icon"><img src="{{asset('img/team/titans.png')}}" alt="" class="img-1">
-            <div class="table-a"><h2>Titans</h2><h4><a
+        <div class="team-icon"><img src="{{asset('img/team/Legion.png')}}" alt="" class="img-1">
+            <div class="table-a"><h2>Legion</h2><h4><a
                         href="https://www.google.com/maps/place/%D0%A1%D0%B0%D0%BD%D0%BA%D1%82-%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3/@59.940414,30.0946716,9z/data=!3m1!4b1!4m5!3m4!1s0x4696378cc74a6f9d:0xfa47ca5a4725c9e4!8m2!3d59.9342596!4d30.3350942">
-                        Санкт-Петербург</a></h4></div>
+                        Москва</a></h4></div>
         </div>
         <table class="table">
             <thead>

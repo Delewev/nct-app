@@ -107,5 +107,11 @@ class TeamController extends Controller
             'users' => User::query()->where('team', '=', 'Кодекс')->get(),
             'user' => Auth::user()]);
     }
+    public function legion()
+    {
+        return view('team.legion', [
+            'users' => User::query()->where('team', '=', 'LEGION')->get(),
+            'user' => Auth::user()]);
+    }
 
 }

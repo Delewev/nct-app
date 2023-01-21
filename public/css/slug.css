@@ -34,11 +34,25 @@
     align-items: center;
     display: flex;
 }
-.setting-a{
+.setting-b{
     display: block;
     text-decoration: none;
-    color: #3490CE;
+    appearance: none;
+    border: 0;
+    border-radius: 5px;
+    background: #4676D7;
+    color: #fff;
+    padding: 6px 16px;
+    font-size: 16px;
 }
+.setting-b:hover{
+    background: #1d49aa;
+}
+.setting-b:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px #cbd6ee;
+}
+
 .setting{
     font-weight: 600;
     float:right;
@@ -47,14 +61,12 @@
     text-decoration: none;
     border-radius: 6px;
     margin-bottom: 5px;
-    background-color: #EDEEF0;
     margin-left: auto;
     margin-right: 100px;
 }
 .setting:hover {
     text-decoration: none; /* Убираем подчёркивание */
     color: #000000;
-    background: #C2CDBC;
 
 }
 .my-photo-t{

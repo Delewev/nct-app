@@ -33,6 +33,7 @@ Route::get('my/{slug?}', [HomeController::class, 'mys'])->name('slug');
 Route::get('cheer/{slug?}', [SettingsController::class, 'you'])->name('you');
 Route::get('/team', [HomeController::class, 'team'])->name('team');
 
+
 // Photo
 Route::resource('news', 'App\Http\Controllers\PhotoController');
 Route::get('photo/{slug?}', [PhotoController::class, 'show'])->name('photo');
@@ -64,6 +65,7 @@ Route::get('/team/groove', [TeamController::class, 'groove'])->name('groove');
 Route::get('/team/insight', [TeamController::class, 'insight'])->name('insight');
 Route::get('/team/favorit', [TeamController::class, 'favorit'])->name('favorit');
 Route::get('/team/kodex', [TeamController::class, 'kodex'])->name('kodex');
+Route::get('/team/legion', [TeamController::class, 'legion'])->name('legion');
 
 
 Route::get('/', function () {

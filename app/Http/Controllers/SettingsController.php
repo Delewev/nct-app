@@ -36,6 +36,11 @@ class SettingsController extends Controller
         return $user;
     }
 
+    public function delete(User $user){
+        $user->delete();
+        return response([]);
+    }
+
     public function users()
     {
         return view('team.nct', ['users' => User::all()]);

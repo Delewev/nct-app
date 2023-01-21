@@ -6,11 +6,10 @@
         <div class="my-name">
             <img class="avotar" src="{{asset('img/Icon/icon1.png')}}" alt="">
             <div class="name"><h4>{{$user->name}} {{$user->lastname}} </h4>
-
             </div>
-                <div class="setting">
-                    <button class="setting-a" >Сообщение</button>
-                </div>
+            <div class="setting">
+            <btn-component></btn-component>
+            </div>
         </div>
         <div class="my-photo-t">
             <div class="my-photo">

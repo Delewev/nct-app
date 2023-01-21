@@ -14,9 +14,7 @@
                 <th>Имя</th>
                 <th>Фамилия</th>
                 <th>Город</th>
-                <th>День рождения</th>
-                <th>Телефон</th>
-                <th>Задача</th>
+                <th>Позиция</th>
             </tr>
             </thead>
             @foreach($users as $user)

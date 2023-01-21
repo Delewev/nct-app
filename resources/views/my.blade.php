@@ -56,6 +56,8 @@
                     <img src="{{asset('img/team/team-icon/grand.png')}}" alt="">
                 @elseif($user->team == 'Destiny' )
                     <img src="{{asset('img/team/team-icon/destiny.jpg')}}" alt="">
+                @elseif($user->team == 'LEGION' )
+                    <img src="{{asset('img/team/Legion.png')}}" alt="">
 
                 @elseif($user->team == null )
                     <img src="{{asset('img/cheer.png')}}" alt="">

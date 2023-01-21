@@ -143,6 +143,7 @@
                             <option>NO-NAME</option>
                             <option>Titans</option>
                             <option>Grand-Arena</option>
+                            <option>LEGION</option>
                             <option>NO-LIMIT</option>
                             <option>Power</option>
                             <option>Destiny</option>
@@ -157,23 +158,33 @@
                     </div>
                 </div>
                 <div class="form-team-d">
-                    <div><h6>Задача</h6></div>
+                    <div><h6>Позиция</h6></div>
                     <div>
                         <select name="cheer" id="cheer" v-model="thisUser.cheer">
                             <option>База</option>
+                            <option>Маутер</option>
                             <option>Флаер</option>
                         </select>
                     </div>
                 </div>
             </div>
         </div>
-        <div>
-            <button type="submit" class="button" name="update" id="submit" onClick="submit" @click="sendData()">
+        <div class="btns">
+            <div>
+                <button type="submit" class="button" name="update" id="submit" onClick="submit" @click="sendData()">
                 <span>
                     Сохранить
                 </span>
-                <i>v</i>
-            </button>
+                    <i>v</i>
+                </button>
+            </div>
+            <div>
+                <button type="submit" class="button2" name="update" id="submit" onClick="submit" @click="senddelete()">
+                <span>
+                    Удалить аккаунт
+                </span>
+                </button>
+            </div>
         </div>
     </div>
 
@@ -191,7 +202,7 @@ export default {
         }
     },
     mounted() {
-        // this.thisUser = this.thisUser;
+        this.thisUser()
     },
     methods: {
         sendData() {

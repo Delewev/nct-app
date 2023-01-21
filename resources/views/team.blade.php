@@ -47,6 +47,8 @@
                                                  class="img-team"></a></li>
                 <li class="li-1"><a href=""><img src="{{asset('img/team/team-icon/united.jpg')}}" alt=""
                                                  class="img-team"></a></li>
+                <li class="li-1"><a href="{{route('legion')}}"><img src="{{asset('img/team/team-icon/legeon-log.png')}}" alt=""
+                                                 class="img-team"></a></li>
                 <li class="li-1"><a href=""><img src="{{asset('img/team/team-icon/husky.jpg')}}" alt=""
                                                  class="img-team"></a></li>
             </ul>

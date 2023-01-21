@@ -16,9 +16,7 @@
                 <th>Имя</th>
                 <th>Фамилия</th>
                 <th>Город</th>
-                <th>День рождения</th>
-                <th>Телефон</th>
-                <th>Задача</th>
+                <th>Позиция</th>
             </tr>
             </thead>
             @foreach($users as $user)
@@ -39,16 +37,6 @@
                         <td><a href="{{route('settings')}}">Указать</a></td>
                     @else
                         <td>{{ $user->city }}</td>
-                    @endif
-                    @if($user->year == null)
-                        <td><a href="{{route('settings')}}">Указать</a></td>
-                    @else
-                        <td>{{$user->day}} {{$user->month}} {{$user->year}}г</td>
-                    @endif
-                    @if($user->phone == null)
-                        <td><a href="{{route('settings')}}">Указать</a></td>
-                    @else
-                        <td>{{$user->phone}}</td>
                     @endif
                     @if($user->cheer == null)
                         <td><a href="{{route('settings')}}">Указать</a></td>

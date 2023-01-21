@@ -22,7 +22,8 @@ window.Vue = require('vue').default;
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 Vue.component('user-component', require('./components/UserComponent.vue').default);
 Vue.component('upload-component', require('./components/UploadFileComponent').default);
-Vue.component('cheer-component', require('./components/CheerComponent').default);
+Vue.component('btn-component', require('./components/MessBtnComponent.vue').default);
+
 
 
 /**
