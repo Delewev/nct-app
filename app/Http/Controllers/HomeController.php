@@ -31,7 +31,7 @@ class HomeController extends Controller
 
     public function mys(string $slug)
     {
-        return view('my', ['user' => User::where('slug', $slug)->first()]);
+            return view('my', ['user' => User::where('slug', $slug)->first()]);
     }
     public function index()
     {
@@ -71,5 +71,7 @@ class HomeController extends Controller
             'user' => $user
         ]);
     }
+
+
 
 }

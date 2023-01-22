@@ -5371,6 +5371,13 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   props: {
@@ -5379,13 +5386,28 @@ __webpack_require__.r(__webpack_exports__);
   },
   data: function data() {
     return {
-      modelOpen: false
+      modelOpen: false,
+      person: null
     };
   },
   mounted: function mounted() {
+    // this.getPers()
+    this.getSlug();
     console.log('Component mounted.');
   },
   methods: {
+    // getPers() {
+    //     axios.get('/person')
+    //         .then(res => {
+    //             this.person = res.data
+    //         })
+    // },
+    getSlug: function getSlug() {
+      var _this = this;
+      axios.get("/persons/damir").then(function (res) {
+        _this.person = res.data;
+      });
+    },
     openModel: function openModel() {
       this.modelOpen = true;
     },
@@ -11090,7 +11112,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.model, .model-bac {\n    position: fixed;\n    left: 0;\n    top: 0;\n    width: 100vw;\n    height: 100vh;\n    z-index: 1000;\n}\n.model-bac {\n    background-color: rgba(10, 10, 10, 0.8);\n    z-index: 40;\n}\n.model {\n    display: flex;\n    align-items: center;\n    justify-content: center;\n}\n.model-con {\n    margin-top: -100px;\n    background-color: white;\n    z-index: 50;\n    width: 500px;\n    height: auto;\n    border-radius: 15px;\n    font-family: -apple-system,system-ui,Helvetica Neue,Roboto,sans-serif;\n}\n.modal-header {\n    justify-content: space-between;\n    padding: 5px;\n    border-bottom: 2px solid #eceeef;\n    background-color: #FAFBFC;\n}\n.modal-title {\n    margin-top: 0;\n    margin-bottom: 0;\n    color: #474747;\n    margin-left: 5px;\n}\n.close {\n    float: right;\n    font-family: sans-serif;\n    font-size: 24px;\n    font-weight: 700;\n    line-height: 1;\n    color: #000;\n    text-shadow: 0 1px 0 #fff;\n    opacity: .5;\n    text-decoration: none;\n}\n.model-name{\n    padding: 10px;\n    display: flex;\n    align-items: center;\n}\n.avatar-icon{\n\n    display: flex;\n    align-items: center;\n}\n.img-1{\n    width: 50px;\n    height: 50px;\n    border-radius: 10px;\n}\n.table-a{\n    margin-left: 20px;\n}\n\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.model, .model-bac {\n    position: fixed;\n    left: 0;\n    top: 0;\n    width: 100vw;\n    height: 100vh;\n    z-index: 1000;\n}\n.model-bac {\n    background-color: rgba(10, 10, 10, 0.5);\n    z-index: 40;\n}\n.model {\n    display: flex;\n    align-items: center;\n    justify-content: center;\n}\n.model-con {\n    justify-content: center;\n    margin-top: -100px;\n    background-color: white;\n    z-index: 50;\n    width: 500px;\n    height: auto;\n    border-radius: 15px;\n    font-family: -apple-system, system-ui, Helvetica Neue, Roboto, sans-serif;\n}\n.modal-header {\n    border-radius: 15px 15px 0px 0px;\n    justify-content: space-between;\n    padding: 15px;\n    border-bottom: 2px solid #eceeef;\n    background-color: #FAFBFC;\n}\n.modal-title {\n    margin-top: 0;\n    margin-bottom: 0;\n    color: #474747;\n    margin-left: 5px;\n}\n.close {\n    border-radius: 15px;\n    border-color: #FAFBFC;\n    float: right;\n    font-family: sans-serif;\n    font-size: 24px;\n    font-weight: 700;\n    line-height: 1;\n    color: #000;\n    text-shadow: 0 1px 0 #fff;\n    opacity: .5;\n    text-decoration: none;\n}\n.model-name {\n    padding: 10px;\n    display: flex;\n    align-items: center;\n}\n.avatar-icon {\n\n    display: flex;\n    align-items: center;\n}\n.img-2 {\n    margin-left: 10px;\n    width: 50px;\n    height: 50px;\n    border-radius: 50px;\n    border: 1px solid grey;\n}\n.model-full {\n    margin-left: 20px;\n}\n.dsc {\n    padding: 10px;\n    width: 480px;\n    height: 170px;\n}\ntextarea {\n    font-family: -apple-system, system-ui, Helvetica Neue, Roboto, sans-serif;\n    resize: none;\n    padding: 2px;\n    width: 100%;\n    height: 100%;\n    align-items: center;\n    border-radius: 4px;\n}\ntextarea:focus {\n    outline: none;\n}\n.setting-b {\n    margin-left: 200px;\n    margin-bottom: 10px;\n}\n\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -29286,22 +29308,45 @@ var render = function () {
                 _vm._v("Новое сообщение"),
               ]),
               _vm._v(" "),
-              _c("a", { attrs: { href: "" } }, [
-                _vm._v("Перейти к диалогу с ... "),
-              ]),
+              _vm._m(0),
               _vm._v(" "),
               _c(
-                "a",
+                "button",
                 {
                   staticClass: "close",
-                  attrs: { title: "Close" },
+                  attrs: { title: "Закрыть" },
                   on: { click: _vm.closeModel },
                 },
                 [_vm._v("×")]
               ),
             ]),
             _vm._v(" "),
-            _vm._m(0),
+            _c("div", { staticClass: "model-name" }, [
+              _c("div", { staticClass: "avatar-icon" }, [
+                _c("img", {
+                  staticClass: "img-2",
+                  attrs: { src: "/img/1_NCTnew.png" },
+                }),
+                _vm._v(" "),
+                _c("div", { staticClass: "model-full" }, [
+                  _c("h5", [
+                    _vm._v(
+                      _vm._s(_vm.person.name) +
+                        " " +
+                        _vm._s(_vm.person.lastname)
+                    ),
+                  ]),
+                ]),
+              ]),
+            ]),
+            _vm._v(" "),
+            _vm._m(1),
+            _vm._v(" "),
+            _c(
+              "button",
+              { staticClass: "setting-b b", on: { click: _vm.closeModel } },
+              [_vm._v("Отправить")]
+            ),
           ]),
         ])
       : _vm._e(),
@@ -29312,15 +29357,16 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "model-name" }, [
-      _c("div", { staticClass: "avatar-icon" }, [
-        _c("img", { staticClass: "img-1", attrs: { src: "" } }),
-        _vm._v(" "),
-        _c("div", { staticClass: "table-a" }, [
-          _c("h4", [_vm._v("Я - ")]),
-          _c("h4", [_vm._v("дата")]),
-        ]),
-      ]),
+    return _c("div", { staticClass: "a" }, [
+      _c("a", { attrs: { href: "" } }, [_vm._v("Перейти к диалогу с ... ")]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "dsc" }, [
+      _c("textarea", { attrs: { name: "comment", cols: "40", rows: "3" } }),
     ])
   },
 ]

@@ -30,9 +30,14 @@
 
 }
 .name{
+    margin-top: 20px;
     margin-left: 10px;
     align-items: center;
-    display: flex;
+}
+.data{
+    color: #5c636a;
+    line-height: 1;
+    margin-top: 10px;
 }
 .setting-b{
     display: block;
@@ -62,7 +67,7 @@
     border-radius: 6px;
     margin-bottom: 5px;
     margin-left: auto;
-    margin-right: 100px;
+    margin-right: 10px;
 }
 .setting:hover {
     text-decoration: none; /* Убираем подчёркивание */

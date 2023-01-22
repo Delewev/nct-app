@@ -6,6 +6,14 @@
         <div class="my-name">
             <img class="avotar" src="{{asset('img/Icon/icon1.png')}}" alt="">
             <div class="name"><h4>{{$user->name}} {{$user->lastname}} </h4>
+                <div class="data"><h7>День рождения: <p>
+                        @if($user->day == null)
+                            Не указанно
+                        @else
+                            {{$user->day}} {{$user->month}}
+                        @endif
+                        </p>
+                    </h7></div>
             </div>
             <div class="setting">
             <btn-component></btn-component>

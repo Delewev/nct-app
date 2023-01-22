@@ -6,15 +6,22 @@
             <div class="model-con">
                 <div class="modal-header">
                     <h6 class="modal-title">Новое сообщение</h6>
-                    <a href="">Перейти к диалогу с ... </a>
-                    <a title="Close" class="close" @click="closeModel">×</a>
+                    <div class="a">
+                        <a href="">Перейти к диалогу с ... </a>
+                    </div>
+                    <button title="Закрыть" class="close" @click="closeModel">×</button>
                 </div>
                 <div class="model-name">
                     <div class="avatar-icon">
-                        <img src=""  class="img-1">
-                            <div class="table-a" ><h4>Я - </h4><h4>дата</h4></div>
+                        <img src="/img/1_NCTnew.png" class="img-2">
+                        <div class="model-full"><h5>{{ person.name }} {{ person.lastname }}</h5>
+                        </div>
                     </div>
                 </div>
+                <div class="dsc">
+                    <textarea name="comment" cols="40" rows="3"></textarea>
+                </div>
+                <button class="setting-b b" @click="closeModel">Отправить</button>
             </div>
         </div>
     </div>
@@ -29,12 +36,27 @@ export default {
     data() {
         return {
             modelOpen: false,
+            person: null
         }
     },
     mounted() {
+        // this.getPers()
+        this.getSlug()
         console.log('Component mounted.')
     },
     methods: {
+        // getPers() {
+        //     axios.get('/person')
+        //         .then(res => {
+        //             this.person = res.data
+        //         })
+        // },
+        getSlug() {
+            axios.get(`/persons/damir`)
+                .then(res => {
+                    this.person = res.data
+                })
+        },
         openModel() {
             this.modelOpen = true
 
@@ -57,7 +79,7 @@ export default {
 }
 
 .model-bac {
-    background-color: rgba(10, 10, 10, 0.8);
+    background-color: rgba(10, 10, 10, 0.5);
     z-index: 40;
 }
 
@@ -68,18 +90,20 @@ export default {
 }
 
 .model-con {
+    justify-content: center;
     margin-top: -100px;
     background-color: white;
     z-index: 50;
     width: 500px;
     height: auto;
     border-radius: 15px;
-    font-family: -apple-system,system-ui,Helvetica Neue,Roboto,sans-serif;
+    font-family: -apple-system, system-ui, Helvetica Neue, Roboto, sans-serif;
 }
 
 .modal-header {
+    border-radius: 15px 15px 0px 0px;
     justify-content: space-between;
-    padding: 5px;
+    padding: 15px;
     border-bottom: 2px solid #eceeef;
     background-color: #FAFBFC;
 }
@@ -92,6 +116,8 @@ export default {
 }
 
 .close {
+    border-radius: 15px;
+    border-color: #FAFBFC;
     float: right;
     font-family: sans-serif;
     font-size: 24px;
@@ -102,24 +128,56 @@ export default {
     opacity: .5;
     text-decoration: none;
 }
-.model-name{
+
+
+
+.model-name {
     padding: 10px;
     display: flex;
     align-items: center;
 }
-.avatar-icon{
+
+.avatar-icon {
 
     display: flex;
     align-items: center;
 }
-.img-1{
+
+.img-2 {
+    margin-left: 10px;
     width: 50px;
     height: 50px;
-    border-radius: 10px;
+    border-radius: 50px;
+    border: 1px solid grey;
 }
-.table-a{
-    margin-left: 20px;
 
+.model-full {
+    margin-left: 20px;
+}
+
+.dsc {
+    padding: 10px;
+    width: 480px;
+    height: 170px;
+}
+
+textarea {
+    font-family: -apple-system, system-ui, Helvetica Neue, Roboto, sans-serif;
+    resize: none;
+    padding: 2px;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    border-radius: 4px;
+}
+
+textarea:focus {
+    outline: none;
+}
+
+.setting-b {
+    margin-left: 200px;
+    margin-bottom: 10px;
 }
 
 </style>

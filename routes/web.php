@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PersonController;
 use App\Http\Controllers\PhotoController;
 use App\Http\Controllers\TeamController;
 use Illuminate\Support\Facades\Route;
@@ -66,6 +67,8 @@ Route::get('/team/insight', [TeamController::class, 'insight'])->name('insight')
 Route::get('/team/favorit', [TeamController::class, 'favorit'])->name('favorit');
 Route::get('/team/kodex', [TeamController::class, 'kodex'])->name('kodex');
 Route::get('/team/legion', [TeamController::class, 'legion'])->name('legion');
+Route::get('/person', [PersonController::class, 'set'] );
+Route::get('/persons/{slug}', [PersonController::class, 'slug'] );
 
 
 Route::get('/', function () {
@@ -76,3 +79,4 @@ Auth::routes();
 //Route::post('/profile', 'ProfileController@update')->name('update.profile');
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::get('/dataupdate', [SettingsController::class, 'dataupdate'])->name('dataupdate');
+
