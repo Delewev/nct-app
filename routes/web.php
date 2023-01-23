@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\MessageController;
 use App\Http\Controllers\PersonController;
 use App\Http\Controllers\PhotoController;
 use App\Http\Controllers\TeamController;
@@ -30,14 +31,15 @@ Route::get('/dataupdate', [HomeController::class, 'dataupdate'])->name('dataupda
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::get('/ments', [HomeController::class, 'ments'])->name('ments');
 //Route::get('my', [HomeController::class, 'my'])->name('my');
-Route::get('my/{slug?}', [HomeController::class, 'mys'])->name('slug');
+Route::get('my', [HomeController::class, 'my'])->name('my');
 Route::get('cheer/{slug?}', [SettingsController::class, 'you'])->name('you');
 Route::get('/team', [HomeController::class, 'team'])->name('team');
+Route::get('/message', [MessageController::class, 'index'])->name('message');
 
 
 // Photo
 Route::resource('news', 'App\Http\Controllers\PhotoController');
-Route::get('photo/{slug?}', [PhotoController::class, 'show'])->name('photo');
+Route::get('photo', [PhotoController::class, 'show'])->name('photo');
 //Route::get('photo', function () {
 //    $users = \App\Models\User::all();
 //    foreach ($users as $user){
@@ -67,8 +69,6 @@ Route::get('/team/insight', [TeamController::class, 'insight'])->name('insight')
 Route::get('/team/favorit', [TeamController::class, 'favorit'])->name('favorit');
 Route::get('/team/kodex', [TeamController::class, 'kodex'])->name('kodex');
 Route::get('/team/legion', [TeamController::class, 'legion'])->name('legion');
-Route::get('/person', [PersonController::class, 'set'] );
-Route::get('/persons/{slug}', [PersonController::class, 'slug'] );
 
 
 Route::get('/', function () {
@@ -79,4 +79,5 @@ Auth::routes();
 //Route::post('/profile', 'ProfileController@update')->name('update.profile');
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::get('/dataupdate', [SettingsController::class, 'dataupdate'])->name('dataupdate');
+Route::delete('/delete/{id}', [SettingsController::class, 'delete'])->name('delete');
 

@@ -29,9 +29,12 @@ class HomeController extends Controller
      * @return \Illuminate\Contracts\Support\Renderable
      */
 
-    public function mys(string $slug)
+    public function my()
     {
-            return view('my', ['user' => User::where('slug', $slug)->first()]);
+        $user = Auth::user();
+        return view('my', [
+            'user' => $user
+        ]);
     }
     public function index()
     {

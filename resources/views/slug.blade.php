@@ -16,7 +16,7 @@
                     </h7></div>
             </div>
             <div class="setting">
-            <btn-component></btn-component>
+            <btn-component :user='@json($user)'></btn-component>
             </div>
         </div>
         <div class="my-photo-t">

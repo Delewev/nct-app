@@ -36,7 +36,8 @@ class SettingsController extends Controller
         return $user;
     }
 
-    public function delete(User $user){
+    public function delete($id){
+        $user = Auth::find($id);
         $user->delete();
         return response([]);
     }

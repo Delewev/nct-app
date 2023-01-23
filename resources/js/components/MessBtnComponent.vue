@@ -14,7 +14,7 @@
                 <div class="model-name">
                     <div class="avatar-icon">
                         <img src="/img/1_NCTnew.png" class="img-2">
-                        <div class="model-full"><h5>{{ person.name }} {{ person.lastname }}</h5>
+                        <div class="model-full"><h5>{{user.name}} {{user.lastname}}</h5>
                         </div>
                     </div>
                 </div>
@@ -29,6 +29,7 @@
 
 <script>
 export default {
+
     props: {
         user: Object,
         dataupdate: String,
@@ -36,27 +37,12 @@ export default {
     data() {
         return {
             modelOpen: false,
-            person: null
+            // person: null
         }
     },
     mounted() {
-        // this.getPers()
-        this.getSlug()
-        console.log('Component mounted.')
     },
     methods: {
-        // getPers() {
-        //     axios.get('/person')
-        //         .then(res => {
-        //             this.person = res.data
-        //         })
-        // },
-        getSlug() {
-            axios.get(`/persons/damir`)
-                .then(res => {
-                    this.person = res.data
-                })
-        },
         openModel() {
             this.modelOpen = true
 

@@ -179,7 +179,7 @@
                 </button>
             </div>
             <div>
-                <button type="submit" class="button2" name="update" id="submit" onClick="submit" @click="senddelete()">
+                <button type="submit" class="button2" name="update" id="submit" onClick="submit" @click="sendDelete(user.id)">
                 <span>
                     Удалить аккаунт
                 </span>
@@ -195,6 +195,7 @@ export default {
     props: {
         user: Object,
         dataupdate: String,
+        delete: String,
     },
     data() {
         return {
@@ -215,6 +216,13 @@ export default {
                     console.log(response.data);
                 });
         },
+        sendDelete(id){
+            axios.delete(`delete/${id}`)
+            .then(res => {
+                this.sendData()
+            })
+
+        }
     },
 };
 </script>

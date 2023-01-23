@@ -50,10 +50,13 @@ class PhotoController extends Controller
         return redirect()->route('news.index');
     }
 
-    public function show(string $slug)
+    public function show()
     {
-        return view('photos', ['users' => User::where('slug', $slug)->first(),
-            'user' => Auth::user()]);
+        $user = Auth::user();
+
+        return view('photos', [
+            'user' => $user
+        ]);
     }
 
 
