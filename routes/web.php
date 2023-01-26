@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\FestController;
 use App\Http\Controllers\MessageController;
 use App\Http\Controllers\PersonController;
 use App\Http\Controllers\PhotoController;
@@ -30,6 +31,8 @@ Route::post('settings', [SettingsController::class, 'dataupdate'])->name('update
 Route::get('/dataupdate', [HomeController::class, 'dataupdate'])->name('dataupdate');
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::get('/ments', [HomeController::class, 'ments'])->name('ments');
+Route::get('/ments/grup', [HomeController::class, 'grup'])->name('grup');
+
 //Route::get('my', [HomeController::class, 'my'])->name('my');
 Route::get('my', [HomeController::class, 'my'])->name('my');
 Route::get('cheer/{slug?}', [SettingsController::class, 'you'])->name('you');
@@ -74,6 +77,10 @@ Route::get('/team/legion', [TeamController::class, 'legion'])->name('legion');
 Route::get('/', function () {
     return view('auth.login');
 });
+
+
+Route::post('/mests/fest', [FestController::class, 'create'])->name('create');
+Route::get('/mests/fest', [FestController::class, 'index'])->name('index');
 
 Auth::routes();
 //Route::post('/profile', 'ProfileController@update')->name('update.profile');

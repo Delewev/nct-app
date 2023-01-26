@@ -2,13 +2,14 @@
 @section('content')
     @include('components.menu')
     <link rel="stylesheet" href="{{asset('css/ments.css')}}">
+    <link rel="stylesheet" href="{{asset('css/festbtn.css')}}">
     <div class="ments">
         <div class="blok">
             <div class="fest">
                 <img src="{{asset('img/fest.png')}}" alt="">
             </div>
             <div class="text">Состоится летом 2023</div>
-            <fest-component></fest-component>
+            <fest-component :user='@json($user)'></fest-component>
         </div>
         <div class="blok2">
             <div class="fest2">

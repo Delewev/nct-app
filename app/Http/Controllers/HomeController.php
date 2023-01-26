@@ -74,6 +74,13 @@ class HomeController extends Controller
             'user' => $user
         ]);
     }
+    public function grup()
+    {
+        $user = Auth::user();
+        return view('grup', [
+            'user' => $user
+        ]);
+    }
 
 
 

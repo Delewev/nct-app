@@ -8,7 +8,7 @@
                 <div class="">
                     <div class="">
                         <div class="logo">
-                            <img class="logo-img" src="{{ asset('img/1_NCTnew.png') }}" alt="">
+                            <img class="logo-img" src="{{ asset('img/cheer.png') }}" alt="">
                             <div class="logo-h"><h4>{{__('Авторизация')}}</h4></div>
                         </div>
                         <div class="">

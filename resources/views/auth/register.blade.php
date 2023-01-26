@@ -7,7 +7,7 @@
         <div class="conteiner-register">
         <div class="form">
             <div class="logo">
-                <img class="logo-img" src="{{ asset('img/1_NCTnew.png') }}" alt="">
+                <img class="logo-img" src="{{ asset('img/cheer.png') }}" alt="">
                 <div class="logo-h"><h4>{{__('Регистрация')}}</h4></div>
             </div>
             <div class="card-body">

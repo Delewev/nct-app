@@ -5367,16 +5367,151 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  props: {
-    user: Object,
-    dataupdate: String
-  },
   data: function data() {
     return {
-      modelOpen: false
-      // person: null
+      modelOpen: false,
+      name: null,
+      lastname: null,
+      phone: null,
+      telegafets: null,
+      fut: null,
+      category: null,
+      city: null,
+      team: null,
+      titelfest: null,
+      namecoch: null,
+      phonecoch: null
     };
   },
   mounted: function mounted() {},
@@ -5387,8 +5522,22 @@ __webpack_require__.r(__webpack_exports__);
     closeModel: function closeModel() {
       this.modelOpen = false;
     },
-    openGrup: function openGrup() {
-      axios.get('/my');
+    addFest: function addFest() {
+      axios.post('/mests/fest', {
+        name: this.name,
+        lastname: this.lastname,
+        phone: this.phone,
+        telegafets: this.telegafets,
+        fut: this.fut,
+        category: this.category,
+        city: this.city,
+        titelfest: this.titelfest,
+        team: this.team,
+        namecoch: this.namecoch,
+        phonecoch: this.phonecoch
+      }).then(function (res) {
+        console.log(res);
+      });
     }
   }
 });
@@ -11161,7 +11310,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.fests, .fests-bac {\n    position: fixed;\n    left: 0;\n    top: 0;\n    width: 100vw;\n    height: 100vh;\n    z-index: 1000;\n}\n.fests-bac {\n    background-color: rgba(10, 10, 10, 0.5);\n    z-index: 40;\n}\n.fests {\n    display: flex;\n    align-items: center;\n    justify-content: center;\n}\n.fests-con {\n    border-radius: 15px;\n    justify-content: center;\n    margin-top: -100px;\n    background-color: white;\n    z-index: 50;\n    width: 400px;\n    height: auto;\n    font-family: -apple-system, system-ui, Helvetica Neue, Roboto, sans-serif;\n}\n.fests-header {\n    border-radius: 15px;\n    justify-content: space-between;\n    padding: 15px;\n}\n.img-fest{\n    margin-left: 100px;\n    width: 150px;\n}\n.btn-op{\n    justify-content: space-between;\n    margin-top: 5px;\n    margin-left: 30px;\n}\n\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.fests, .fests-bac {\n    position: fixed;\n    left: 0;\n    top: 0;\n    width: 100vw;\n    height: 100vh;\n    z-index: 1000;\n}\n.fests-bac {\n    background-color: rgba(10, 10, 10, 0.5);\n    z-index: 40;\n}\n.fests {\n    display: flex;\n    align-items: center;\n    justify-content: center;\n}\n.fests-con {\n    border-radius: 15px;\n    justify-content: center;\n    margin-top: -100px;\n    background-color: white;\n    z-index: 50;\n    width: auto;\n    height: auto;\n    padding: 10px;\n    font-family: -apple-system, system-ui, Helvetica Neue, Roboto, sans-serif;\n}\n.fests-header {\n    border-radius: 15px;\n    justify-content: space-between;\n    padding: 15px;\n}\n.img-fest {\n    margin-left: 100px;\n    width: 150px;\n}\n.btn-op {\n    justify-content: space-between;\n    margin-top: 5px;\n    margin-left: 30px;\n}\n\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -29492,7 +29641,447 @@ var render = function () {
             on: { click: _vm.closeModel },
           }),
           _vm._v(" "),
-          _vm._m(0),
+          _c("div", { staticClass: "fests-con" }, [
+            _vm._m(0),
+            _vm._v(" "),
+            _c("div", { staticClass: "contents" }, [
+              _c("div", { staticClass: "form-grup" }, [
+                _c("div", { staticClass: "form-name" }, [
+                  _c("div", [
+                    _vm._m(1),
+                    _vm._v(" "),
+                    _c("div", [
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.name,
+                            expression: "name",
+                          },
+                        ],
+                        attrs: { type: "text", name: "name", id: "name" },
+                        domProps: { value: _vm.name },
+                        on: {
+                          input: function ($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.name = $event.target.value
+                          },
+                        },
+                      }),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "form-name-f" }, [
+                    _vm._m(2),
+                    _vm._v(" "),
+                    _c("div", [
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.lastname,
+                            expression: "lastname",
+                          },
+                        ],
+                        attrs: {
+                          type: "text",
+                          name: "lastname",
+                          id: "lastname",
+                        },
+                        domProps: { value: _vm.lastname },
+                        on: {
+                          input: function ($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.lastname = $event.target.value
+                          },
+                        },
+                      }),
+                    ]),
+                  ]),
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "form-name" }, [
+                  _c("div", [
+                    _vm._m(3),
+                    _vm._v(" "),
+                    _c("div", [
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.phone,
+                            expression: "phone",
+                          },
+                        ],
+                        attrs: { type: "tel", name: "phone", id: "phone" },
+                        domProps: { value: _vm.phone },
+                        on: {
+                          input: function ($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.phone = $event.target.value
+                          },
+                        },
+                      }),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "form-name-f" }, [
+                    _vm._m(4),
+                    _vm._v(" "),
+                    _c("div", [
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.telegafets,
+                            expression: "telegafets",
+                          },
+                        ],
+                        attrs: {
+                          type: "text",
+                          name: "telegafets",
+                          id: "telegafets",
+                          placeholder: "@",
+                        },
+                        domProps: { value: _vm.telegafets },
+                        on: {
+                          input: function ($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.telegafets = $event.target.value
+                          },
+                        },
+                      }),
+                    ]),
+                  ]),
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "fut-grup" }, [
+                  _c("div", { staticClass: "fut" }, [
+                    _vm._m(5),
+                    _vm._v(" "),
+                    _c("div", [
+                      _c(
+                        "select",
+                        {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.fut,
+                              expression: "fut",
+                            },
+                          ],
+                          attrs: { name: "fut", id: "fut" },
+                          on: {
+                            change: function ($event) {
+                              var $$selectedVal = Array.prototype.filter
+                                .call($event.target.options, function (o) {
+                                  return o.selected
+                                })
+                                .map(function (o) {
+                                  var val = "_value" in o ? o._value : o.value
+                                  return val
+                                })
+                              _vm.fut = $event.target.multiple
+                                ? $$selectedVal
+                                : $$selectedVal[0]
+                            },
+                          },
+                        },
+                        [
+                          _c("option", [_vm._v("XS")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("S")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("M")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("L")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("XL")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("XХL")]),
+                        ]
+                      ),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "grup" }, [
+                    _vm._m(6),
+                    _vm._v(" "),
+                    _c("div", [
+                      _c(
+                        "select",
+                        {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.category,
+                              expression: "category",
+                            },
+                          ],
+                          attrs: { name: "category", id: "category" },
+                          on: {
+                            change: function ($event) {
+                              var $$selectedVal = Array.prototype.filter
+                                .call($event.target.options, function (o) {
+                                  return o.selected
+                                })
+                                .map(function (o) {
+                                  var val = "_value" in o ? o._value : o.value
+                                  return val
+                                })
+                              _vm.category = $event.target.multiple
+                                ? $$selectedVal
+                                : $$selectedVal[0]
+                            },
+                          },
+                        },
+                        [
+                          _c("option", [_vm._v("Групповой")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("Партнёрка")]),
+                        ]
+                      ),
+                    ]),
+                  ]),
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "form-info" }),
+                _vm._v(" "),
+                _c("div", { staticClass: "form-team" }, [
+                  _c("div", { staticClass: "form-team-d" }, [
+                    _c("div", { staticClass: "cityfest" }, [
+                      _vm._m(7),
+                      _vm._v(" "),
+                      _c("div", [
+                        _c("input", {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.city,
+                              expression: "city",
+                            },
+                          ],
+                          attrs: { type: "text", name: "city", id: "city" },
+                          domProps: { value: _vm.city },
+                          on: {
+                            input: function ($event) {
+                              if ($event.target.composing) {
+                                return
+                              }
+                              _vm.city = $event.target.value
+                            },
+                          },
+                        }),
+                      ]),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "form-team-d" }, [
+                    _vm._m(8),
+                    _vm._v(" "),
+                    _c("div", [
+                      _c(
+                        "select",
+                        {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.team,
+                              expression: "team",
+                            },
+                          ],
+                          attrs: { name: "team", id: "team" },
+                          on: {
+                            change: function ($event) {
+                              var $$selectedVal = Array.prototype.filter
+                                .call($event.target.options, function (o) {
+                                  return o.selected
+                                })
+                                .map(function (o) {
+                                  var val = "_value" in o ? o._value : o.value
+                                  return val
+                                })
+                              _vm.team = $event.target.multiple
+                                ? $$selectedVal
+                                : $$selectedVal[0]
+                            },
+                          },
+                        },
+                        [
+                          _c("option", [_vm._v("NCT")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("G-FAME")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("Zachet")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("Fenomen-A")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("NO-NAME")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("Titans")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("Grand-Arena")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("LEGION")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("NO-LIMIT")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("Power")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("Destiny")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("Groove")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("Insight")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("Фаворит")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("Кодекс")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("United")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("Husky")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("Другое")]),
+                        ]
+                      ),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "form-team-d" }, [
+                    _vm._m(9),
+                    _vm._v(" "),
+                    _c("div", [
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.titelfest,
+                            expression: "titelfest",
+                          },
+                        ],
+                        attrs: { name: "titelfest", id: "titelfest" },
+                        domProps: { value: _vm.titelfest },
+                        on: {
+                          input: function ($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.titelfest = $event.target.value
+                          },
+                        },
+                      }),
+                    ]),
+                  ]),
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "contakt" }, [
+                  _c("div", { staticClass: "name" }, [
+                    _vm._m(10),
+                    _vm._v(" "),
+                    _c("div", [
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.namecoch,
+                            expression: "namecoch",
+                          },
+                        ],
+                        attrs: {
+                          id: "namecoch",
+                          name: "namecoch",
+                          placeholder: "Иванов Иван",
+                        },
+                        domProps: { value: _vm.namecoch },
+                        on: {
+                          input: function ($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.namecoch = $event.target.value
+                          },
+                        },
+                      }),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "telcoch" }, [
+                    _vm._m(11),
+                    _vm._v(" "),
+                    _c("div", [
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.phonecoch,
+                            expression: "phonecoch",
+                          },
+                        ],
+                        attrs: { id: "phonecoch", name: "phonecoch" },
+                        domProps: { value: _vm.phonecoch },
+                        on: {
+                          input: function ($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.phonecoch = $event.target.value
+                          },
+                        },
+                      }),
+                    ]),
+                  ]),
+                ]),
+              ]),
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "btns" }, [
+              _c("div", [
+                _c(
+                  "button",
+                  {
+                    staticClass: "button",
+                    attrs: {
+                      onclick: "document.location='/mests/fest'",
+                      type: "submit",
+                      id: "submit",
+                    },
+                    on: {
+                      click: function ($event) {
+                        return _vm.addFest()
+                      },
+                    },
+                  },
+                  [
+                    _c("span", [
+                      _vm._v("\n                Отправить\n            "),
+                    ]),
+                    _vm._v(" "),
+                    _c("i", [_vm._v("v")]),
+                  ]
+                ),
+              ]),
+            ]),
+          ]),
         ])
       : _vm._e(),
   ])
@@ -29502,41 +30091,85 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "fests-con" }, [
-      _c(
-        "div",
-        {
-          staticClass: "fests-header",
-          staticStyle: { "background-color": "white" },
-        },
-        [
-          _c("img", {
-            staticClass: "img-fest",
-            attrs: { src: "/img/fest.png", alt: "" },
-          }),
-        ]
-      ),
-      _vm._v(" "),
-      _c("div", { staticClass: "btn-op" }, [
-        _c(
-          "button",
-          {
-            staticClass: "btn4",
-            attrs: { onclick: "document.location='/ments/grup'" },
-          },
-          [_vm._v("Гупповай")]
-        ),
-        _vm._v(" "),
-        _c(
-          "button",
-          {
-            staticClass: "btn4",
-            attrs: { onclick: "document.location='/ments/part'" },
-          },
-          [_vm._v("Партнёрка")]
-        ),
-      ]),
-    ])
+    return _c(
+      "div",
+      {
+        staticClass: "fests-header",
+        staticStyle: { "background-color": "white" },
+      },
+      [
+        _c("img", {
+          staticClass: "img-fest",
+          attrs: { src: "/img/fest.png", alt: "" },
+        }),
+      ]
+    )
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", [_c("h6", [_vm._v("Имя")])])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", [_c("h6", [_vm._v("Фамилия")])])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", [_c("h6", [_vm._v("Номер Телефона")])])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", [_c("h6", [_vm._v("ID Telegram")])])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", [_c("h6", [_vm._v("Размер футболки")])])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", [_c("h6", [_vm._v("Выбрать категорию")])])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", [_c("h6", [_vm._v("Город")])])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", [_c("h6", [_vm._v("Команда")])])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", [_c("h6", [_vm._v("Название гуппового")])])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", [_c("h6", [_vm._v("ФИ контактного лица")])])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", [_c("h6", [_vm._v("Телефо контактного лица")])])
   },
 ]
 render._withStripped = true

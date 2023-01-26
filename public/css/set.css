@@ -3847,8 +3847,7 @@ textarea.form-control-lg {
 }
 
 .navbar-nav-scroll {
-    max-height: var(--bs-scroll-height, 75vh);
-    overflow-y: auto;
+
 }
 
 @media (min-width: 576px) {
@@ -4486,7 +4485,6 @@ textarea.form-control-lg {
     float: left;
     padding-right: var(--bs-breadcrumb-item-padding-x);
     color: var(--bs-breadcrumb-divider-color);
-    content: var(--bs-breadcrumb-divider, "/") /* rtl: var(--bs-breadcrumb-divider, "/") */;
 }
 .breadcrumb-item.active {
     color: var(--bs-breadcrumb-item-active-color);
@@ -6630,7 +6628,6 @@ textarea.form-control-lg {
     }
 }
 .placeholder-wave {
-    -webkit-mask-image: linear-gradient(130deg, #000 55%, rgba(0, 0, 0, 0.8) 75%, #000 95%);
     mask-image: linear-gradient(130deg, #000 55%, rgba(0, 0, 0, 0.8) 75%, #000 95%);
     -webkit-mask-size: 200% 100%;
     mask-size: 200% 100%;
