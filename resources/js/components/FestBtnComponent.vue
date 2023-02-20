@@ -1,6 +1,6 @@
 <template>
     <div>
-        <button class="btn4" @click="openModel">Участвовать</button>
+        <button class="btn4" @click="openModel">Заявка</button>
         <div class="fests" v-if="modelOpen">
             <div class="fests-bac" @click="closeModel"></div>
             <div class="fests-con">

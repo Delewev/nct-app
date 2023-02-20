@@ -32,14 +32,14 @@ class HomeController extends Controller
     public function my()
     {
         $user = Auth::user();
-        return view('my', [
-            'user' => $user
+        return view('menu.my', [
+            'user' => $user,
         ]);
     }
     public function index()
     {
         $user = Auth::user();
-        return view('home', [
+        return view('menu.home', [
             'user' => $user
         ]);
     }
@@ -54,7 +54,7 @@ class HomeController extends Controller
     public function ments()
     {
         $user = Auth::user();
-        return view('ments', [
+        return view('menu.ments.ments', [
             'user' => $user
         ]);
     }
@@ -62,7 +62,7 @@ class HomeController extends Controller
     public function team()
     {
         $user = Auth::user();
-        return view('team', [
+        return view('menu.team', [
             'user' => $user
         ]);
     }

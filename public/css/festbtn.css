@@ -1,23 +1,4 @@
-.form-grup{
-    margin-left: 20px;
-    display: block;
-    justify-content: center;
-    color: #1b1e21;
-}
-.form {
-     border: 2px solid #ced4da;
-     line-height: 15px;
-     font-size: 15px;
-     width: 500px;
-     height: auto;
-     background-color: #ffff;
-     margin-left: auto;
-     margin-right: auto;
-     margin-top: 20px;
-     border-radius: 15px;
-     word-wrap: break-word;
-     padding: 10px 10px 10px 10px;
- }
+
 input{
     border-radius: 8px;
     height: 30px;
@@ -51,13 +32,16 @@ input:focus {
     font-family: -apple-system,system-ui,Helvetica Neue,Roboto,sans-serif;
 }
 h6{
+    display: block !important;
+    margin: 0;
     font-size: 14px;
     color: #848D85;
 }
 .form-name
 {
+    margin-top:  0;
+    margin-bottom:  0;
     display: flex;
-    margin-right: 10px;
     padding: 10px 10px 10px 10px;
 
 }

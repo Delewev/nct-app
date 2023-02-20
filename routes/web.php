@@ -1,8 +1,8 @@
 <?php
 
 use App\Http\Controllers\FestController;
+use App\Http\Controllers\FestGrupController;
 use App\Http\Controllers\MessageController;
-use App\Http\Controllers\PersonController;
 use App\Http\Controllers\PhotoController;
 use App\Http\Controllers\TeamController;
 use Illuminate\Support\Facades\Route;
@@ -56,34 +56,39 @@ Route::get('photo', [PhotoController::class, 'show'])->name('photo');
 
 
 // Команды
-Route::get('/team/cheer', [TeamController::class, 'cheer'])->name('cheer');
-Route::get('/team/nct', [TeamController::class, 'nct'])->name('nct');
-Route::get('/team/fa', [TeamController::class, 'fa'])->name('fa');
-Route::get('/team/zachet', [TeamController::class, 'zachet'])->name('zachet');
-Route::get('/team/g-fam', [TeamController::class, 'gfam'])->name('gfam');
-Route::get('/team/no-name', [TeamController::class, 'noname'])->name('no-name');
-Route::get('/team/titans', [TeamController::class, 'titans'])->name('titans');
-Route::get('/team/grand-arena', [TeamController::class, 'grand'])->name('grand');
-Route::get('/team/no-limit', [TeamController::class, 'nolimit'])->name('nolimit');
-Route::get('/team/power', [TeamController::class, 'power'])->name('power');
-Route::get('/team/destiny', [TeamController::class, 'destiny'])->name('destiny');
-Route::get('/team/groove', [TeamController::class, 'groove'])->name('groove');
-Route::get('/team/insight', [TeamController::class, 'insight'])->name('insight');
-Route::get('/team/favorit', [TeamController::class, 'favorit'])->name('favorit');
-Route::get('/team/kodex', [TeamController::class, 'kodex'])->name('kodex');
-Route::get('/team/legion', [TeamController::class, 'legion'])->name('legion');
+Route::prefix('team')->group(function (){
+    Route::get('cheer', [TeamController::class, 'cheer'])->name('cheer');
+    Route::get('nct', [TeamController::class, 'nct'])->name('nct');
+    Route::get('fa', [TeamController::class, 'fa'])->name('fa');
+    Route::get('zachet', [TeamController::class, 'zachet'])->name('zachet');
+    Route::get('g-fam', [TeamController::class, 'gfam'])->name('gfam');
+    Route::get('no-name', [TeamController::class, 'noname'])->name('no-name');
+    Route::get('titans', [TeamController::class, 'titans'])->name('titans');
+    Route::get('grand-arena', [TeamController::class, 'grand'])->name('grand');
+    Route::get('no-limit', [TeamController::class, 'nolimit'])->name('nolimit');
+    Route::get('power', [TeamController::class, 'power'])->name('power');
+    Route::get('destiny', [TeamController::class, 'destiny'])->name('destiny');
+    Route::get('groove', [TeamController::class, 'groove'])->name('groove');
+    Route::get('insight', [TeamController::class, 'insight'])->name('insight');
+    Route::get('favorit', [TeamController::class, 'favorit'])->name('favorit');
+    Route::get('kodex', [TeamController::class, 'kodex'])->name('kodex');
+    Route::get('legion', [TeamController::class, 'legion'])->name('legion');
+});
+
 
 
 Route::get('/', function () {
     return view('auth.login');
 });
 
+Route::get('/mests/grup', [FestGrupController::class, 'index'])->name('grup.index');
+Route::post('/mests/grup', [FestGrupController::class, 'store'])->name('grup.store');
 
 Route::post('/mests/fest', [FestController::class, 'create'])->name('create');
-Route::get('/mests/fest', [FestController::class, 'index'])->name('index');
+Route::get('/mests/fest', [FestController::class, 'index'])->name('fest.index');
+Route::get('/mests/set', [FestController::class, 'set'])->name('set');
 
 Auth::routes();
-//Route::post('/profile', 'ProfileController@update')->name('update.profile');
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::get('/dataupdate', [SettingsController::class, 'dataupdate'])->name('dataupdate');
 Route::delete('/delete/{id}', [SettingsController::class, 'delete'])->name('delete');

@@ -9,7 +9,8 @@
                 <img src="{{asset('img/fest.png')}}" alt="">
             </div>
             <div class="text">Состоится летом 2023</div>
-            <fest-component :user='@json($user)'></fest-component>
+            <button class="btn4" onclick="document.location='{{route('fest.index')}}'">Участники</button>
+            <btn-component></btn-component>
         </div>
         <div class="blok2">
             <div class="fest2">
@@ -23,7 +24,7 @@
                 <img src="{{asset('img/fest.png')}}" alt="">
             </div>
             <div class="text">Состоится летом 2023</div>
-            <button class="btn4" onclick="document.location=''">Подробно</button>
+            <button class="btn4" >Подробно</button>
         </div>
     </div>
 @endsection

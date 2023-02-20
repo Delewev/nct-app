@@ -54,7 +54,7 @@ class PhotoController extends Controller
     {
         $user = Auth::user();
 
-        return view('photos', [
+        return view('menu.photos', [
             'user' => $user
         ]);
     }

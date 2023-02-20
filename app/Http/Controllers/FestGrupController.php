@@ -3,22 +3,25 @@
 namespace App\Http\Controllers;
 
 use App\Models\Fest;
-use App\Models\User;
-use Illuminate\Support\Facades\Auth;
+use App\Models\FestGrup;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
-class FestController extends Controller
+class FestGrupController extends Controller
 {
-    public function create(Request $request)
+    public function index()
     {
+        $user = Auth::user();
+        return view('menu.Ments.grup', compact('user'));
+    }
 
-        $fest = new Fest();
+    public function store(Request $request){
+        $fest = new FestGrup();
         $fest->name = $request->input('name');
         $fest->lastname = $request->input('lastname');
         $fest->phone = $request->input('phone');
         $fest->telegafets = $request->input('telegafets');
         $fest->fut = $request->input('fut');
-        $fest->category = $request->input('category');
         $fest->city = $request->input('city');
         $fest->team = $request->input('team');
         $fest->titelfest = $request->input('titelfest');
@@ -26,23 +29,6 @@ class FestController extends Controller
         $fest->phonecoch = $request->input('phonecoch');
         $fest->user_id = request()->user()->id;
         $fest->save();
-        return $fest;
+        return redirect()->route('fest.index');
     }
-
-
-    public function index()
-    {
-        $users = User::with('fests')->get();
-        $fests = Fest::all();
-        return view('menu.ments.fest', compact('users', 'fests'), [
-        ]);
-    }
-
-    public function set()
-    {
-        $festCategories = Fest::with('user')->get()->groupBy('category');
-        return view('home', compact('festCategories'));
-    }
-
-
 }

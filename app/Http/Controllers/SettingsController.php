@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Log;
 
-class SettingsController extends Controller
+class SettingsController extends BaseController
 {
     public function index()
     {
@@ -49,11 +49,11 @@ class SettingsController extends Controller
     public function photos()
     {
         $photo = Photo::all();
-        return view('my', ['photo' => $photo]);
+        return view('menu.my', ['photo' => $photo]);
     }
 
     public function you(string $slug){
-        return view('slug', ['user' => User::where('slug', $slug)->first(),
+        return view('slug', ['user' => User::where('slug', $slug)->firstOrFail(),
             'users' => Auth::user()]);
     }
 }

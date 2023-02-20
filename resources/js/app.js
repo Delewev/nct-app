@@ -24,6 +24,7 @@ Vue.component('user-component', require('./components/UserComponent.vue').defaul
 Vue.component('upload-component', require('./components/UploadFileComponent').default);
 Vue.component('btn-component', require('./components/MessBtnComponent.vue').default);
 Vue.component('fest-component', require('./components/FestBtnComponent').default);
+Vue.component('btn-component', require('./components/BtnFestComponent').default);
 
 
 
