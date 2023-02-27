@@ -22,7 +22,7 @@ window.Vue = require('vue').default;
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 Vue.component('user-component', require('./components/UserComponent.vue').default);
 Vue.component('upload-component', require('./components/UploadFileComponent').default);
-Vue.component('btn-component', require('./components/MessBtnComponent.vue').default);
+Vue.component('mess-component', require('./components/MessBtnComponent.vue').default);
 Vue.component('fest-component', require('./components/FestBtnComponent').default);
 Vue.component('btn-component', require('./components/BtnFestComponent').default);
 

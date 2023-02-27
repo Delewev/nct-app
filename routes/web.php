@@ -1,13 +1,14 @@
 <?php
 
-use App\Http\Controllers\FestController;
-use App\Http\Controllers\FestGrupController;
-use App\Http\Controllers\MessageController;
+use App\Http\Controllers\Fest\FestController;
+use App\Http\Controllers\Fest\FestGrupController;
+use App\Http\Controllers\Fest\FestPartController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\Message\MessageController;
 use App\Http\Controllers\PhotoController;
+use App\Http\Controllers\SettingsController;
 use App\Http\Controllers\TeamController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\SettingsController;
-use App\Http\Controllers\HomeController;
 
 
 /*
@@ -26,15 +27,16 @@ use App\Http\Controllers\HomeController;
 //});
 //
 Auth::routes();
-Route::get('/home/settings', [SettingsController::class, 'index'])->name('settings');
+
 Route::post('settings', [SettingsController::class, 'dataupdate'])->name('update.settings');
 Route::get('/dataupdate', [HomeController::class, 'dataupdate'])->name('dataupdate');
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::get('/ments', [HomeController::class, 'ments'])->name('ments');
 Route::get('/ments/grup', [HomeController::class, 'grup'])->name('grup');
 
-//Route::get('my', [HomeController::class, 'my'])->name('my');
+
 Route::get('my', [HomeController::class, 'my'])->name('my');
+Route::get('/my/settings', [SettingsController::class, 'index'])->name('settings');
 Route::get('cheer/{slug?}', [SettingsController::class, 'you'])->name('you');
 Route::get('/team', [HomeController::class, 'team'])->name('team');
 Route::get('/message', [MessageController::class, 'index'])->name('message');
@@ -81,12 +83,13 @@ Route::get('/', function () {
     return view('auth.login');
 });
 
-Route::get('/mests/grup', [FestGrupController::class, 'index'])->name('grup.index');
-Route::post('/mests/grup', [FestGrupController::class, 'store'])->name('grup.store');
+Route::get('/ments/grup', [FestGrupController::class, 'index'])->name('grup.index');
+Route::post('/ments/grup', [FestGrupController::class, 'store'])->name('grup.store');
+Route::get('/ments/part', [FestPartController::class, 'index'])->name('grup.index');
+Route::post('/ments/part', [FestPartController::class, 'store'])->name('grup.store');
 
-Route::post('/mests/fest', [FestController::class, 'create'])->name('create');
-Route::get('/mests/fest', [FestController::class, 'index'])->name('fest.index');
-Route::get('/mests/set', [FestController::class, 'set'])->name('set');
+Route::get('/ments/all', [FestController::class,'index'])->name('festall.index');
+
 
 Auth::routes();
 Route::get('/home', [HomeController::class, 'index'])->name('home');

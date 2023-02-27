@@ -18,6 +18,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/set.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/icon.css') }}" rel="stylesheet">
 </head>
 <body>
     <div id="app">
@@ -59,10 +60,29 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+
                                     <a class="dropdown-item" href="{{ route('settings') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('settings').submit();">
+                                        <img class="img-ico" src="{{asset('img/Icon/header/1_NCTnew.png')}}" alt="">
+                                        NCT Аккаунт
+                                    </a>
+                                    <a class="dropdown-item" href="{{ route('settings') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('settings').submit();">
+                                        <img class="img-ico" src="{{asset('img/Icon/header/admin.png')}}" alt="" style="width: 35px; height: 35px; margin-right:  2px">Панель администратора
+                                    </a>
+                                    <a class="dropdown-item" href="{{ route('settings') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('settings').submit();">
+                                        <img class="img-ico" src="{{asset('img/Icon/header/setting.png')}}" alt="">
                                         {{ __('Личные данные') }}
+                                    </a>
+                                    <a class="dropdown-item" href="{{ route('settings') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('settings').submit();">
+                                        <img class="img-ico" src="{{asset('img/Icon/header/Замок.png')}}" alt="">
+                                        Безопасность
                                     </a>
                                     <form id="settings" action="{{ route('settings') }}" method="GET" class="d-none">
                                         @csrf
@@ -70,6 +90,7 @@
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
+                                        <img class="img-ico"  src="{{asset('img/Icon/header/exit.png')}}" alt="">
                                         {{ __('Выход') }}
                                     </a>
 

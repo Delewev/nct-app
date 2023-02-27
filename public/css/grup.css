@@ -1,10 +1,8 @@
+
 .fon{
-    margin-top: -10px;
-    margin-left: -10px;
     position: fixed;
     width: 100%;
-    height: 100vh;
-    background-position: center center;
+    height: 100%;
     background-attachment: fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -14,7 +12,7 @@
     scroll-margin: revert
 }
 .fests {
-
+    margin-top: 100px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -22,13 +20,11 @@
 
 .fests-con {
     background-color: whitesmoke;
-    margin-top: 30px;
     border-radius: 20px;
     border: 1px solid grey;
     font-family: -apple-system, system-ui, Helvetica Neue, Roboto, sans-serif;
 }
 .img-fest {
-    margin-top: 30px;
     margin-left: 120px;
     width: 170px;
 }

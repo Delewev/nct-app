@@ -1,5 +1,7 @@
+@extends('layouts.app')
 <link rel="stylesheet" href="{{asset('css/grup.css')}}">
 <link rel="stylesheet" href="{{asset('css/festbtn.css')}}">
+<div class="fonall">
 <div class="fon" style="background-image: url({{asset('img/grupfest.jpg')}});">
 <div class="fests" >
     <form action="{{route('grup.store')}}" method="post" >
@@ -124,5 +126,6 @@
         </div>
     </div>
     </form>
+</div>
 </div>
 </div>

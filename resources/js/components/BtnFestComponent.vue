@@ -5,10 +5,10 @@
             <div class="fests-bac" @click="closeModel"></div>
             <div class="fests-con">
                 <div class="contents">
-                    <button onclick="document.location='/mests/grup'"
+                    <button onclick="document.location='/ments/grup'"
                             type="submit" class="btn4" > Групповой
                     </button>
-                    <button onclick="document.location='/mests/fest'"
+                    <button onclick="document.location='/ments/fest'"
                             type="submit" class="btn4" > Партнёрский
                     </button>
 

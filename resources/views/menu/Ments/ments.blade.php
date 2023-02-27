@@ -9,7 +9,7 @@
                 <img src="{{asset('img/fest.png')}}" alt="">
             </div>
             <div class="text">Состоится летом 2023</div>
-            <button class="btn4" onclick="document.location='{{route('fest.index')}}'">Участники</button>
+            <button class="btn4" onclick="document.location='{{route('festall.index')}}'">Участники</button>
             <btn-component></btn-component>
         </div>
         <div class="blok2">

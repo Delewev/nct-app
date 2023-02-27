@@ -1,13 +1,13 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Fest;
 
-use App\Models\Fest;
+use App\Http\Controllers\Controller;
 use App\Models\FestGrup;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
-class FestGrupController extends Controller
+class FestPartController extends Controller
 {
     public function index()
     {

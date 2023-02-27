@@ -6071,7 +6071,7 @@ window.Vue = (__webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm.js
 Vue.component('example-component', (__webpack_require__(/*! ./components/ExampleComponent.vue */ "./resources/js/components/ExampleComponent.vue")["default"]));
 Vue.component('user-component', (__webpack_require__(/*! ./components/UserComponent.vue */ "./resources/js/components/UserComponent.vue")["default"]));
 Vue.component('upload-component', (__webpack_require__(/*! ./components/UploadFileComponent */ "./resources/js/components/UploadFileComponent.vue")["default"]));
-Vue.component('btn-component', (__webpack_require__(/*! ./components/MessBtnComponent.vue */ "./resources/js/components/MessBtnComponent.vue")["default"]));
+Vue.component('mess-component', (__webpack_require__(/*! ./components/MessBtnComponent.vue */ "./resources/js/components/MessBtnComponent.vue")["default"]));
 Vue.component('fest-component', (__webpack_require__(/*! ./components/FestBtnComponent */ "./resources/js/components/FestBtnComponent.vue")["default"]));
 Vue.component('btn-component', (__webpack_require__(/*! ./components/BtnFestComponent */ "./resources/js/components/BtnFestComponent.vue")["default"]));
 
@@ -29814,7 +29814,7 @@ var staticRenderFns = [
           {
             staticClass: "btn4",
             attrs: {
-              onclick: "document.location='/mests/grup'",
+              onclick: "document.location='/ments/grup'",
               type: "submit",
             },
           },
@@ -29826,7 +29826,7 @@ var staticRenderFns = [
           {
             staticClass: "btn4",
             attrs: {
-              onclick: "document.location='/mests/fest'",
+              onclick: "document.location='/ments/fest'",
               type: "submit",
             },
           },
