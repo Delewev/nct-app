@@ -48,8 +48,11 @@ class User extends Authenticatable
         return $this->hasMany(Photo::class);
     }
 
-    public function fests(){
-        return $this->hasMany(Fest::class);
+    public function festsgrup(){
+        return $this->hasMany(FestGrup::class);
+    }
+    public function festspart(){
+        return $this->hasMany(FestPart::class);
     }
 
     use Sluggable;

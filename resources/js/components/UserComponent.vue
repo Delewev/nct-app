@@ -168,6 +168,7 @@
                     </div>
                 </div>
             </div>
+            <h6 style="margin-top: 15px; margin-left: 7px">Если вы не нашли свою команду, укажите "Другое" и напишите нам в телеграм!</h6>
         </div>
         <div class="btns">
             <div>

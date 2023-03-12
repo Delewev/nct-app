@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\Fest\FestController;
 use App\Http\Controllers\Fest\FestGrupController;
 use App\Http\Controllers\Fest\FestPartController;
@@ -27,6 +28,8 @@ use Illuminate\Support\Facades\Route;
 //});
 //
 Auth::routes();
+
+Route::get('admin', [AdminController::class, 'index'])->name('admin.index');
 
 Route::post('settings', [SettingsController::class, 'dataupdate'])->name('update.settings');
 Route::get('/dataupdate', [HomeController::class, 'dataupdate'])->name('dataupdate');
@@ -85,10 +88,10 @@ Route::get('/', function () {
 
 Route::get('/ments/grup', [FestGrupController::class, 'index'])->name('grup.index');
 Route::post('/ments/grup', [FestGrupController::class, 'store'])->name('grup.store');
-Route::get('/ments/part', [FestPartController::class, 'index'])->name('grup.index');
-Route::post('/ments/part', [FestPartController::class, 'store'])->name('grup.store');
+Route::get('/ments/part', [FestPartController::class, 'index'])->name('part.index');
+Route::post('/ments/part', [FestPartController::class, 'store'])->name('part.store');
 
-Route::get('/ments/all', [FestController::class,'index'])->name('festall.index');
+Route::get('/ments/festall', [FestController::class,'index'])->name('festall.index');
 
 
 Auth::routes();

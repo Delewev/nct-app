@@ -6004,6 +6004,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   props: {
@@ -31311,6 +31312,16 @@ var render = function () {
           ]),
         ]),
       ]),
+      _vm._v(" "),
+      _c(
+        "h6",
+        { staticStyle: { "margin-top": "15px", "margin-left": "7px" } },
+        [
+          _vm._v(
+            'Если вы не нашли свою команду, укажите "Другое" и напишите нам в телеграм!'
+          ),
+        ]
+      ),
     ]),
     _vm._v(" "),
     _c("div", { staticClass: "btns" }, [

@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Fest;
 
 use App\Http\Controllers\Controller;
-use App\Models\FestGrup;
+use App\Models\FestPart;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -16,7 +16,7 @@ class FestPartController extends Controller
     }
 
     public function store(Request $request){
-        $fest = new FestGrup();
+        $fest = new FestPart();
         $fest->name = $request->input('name');
         $fest->lastname = $request->input('lastname');
         $fest->phone = $request->input('phone');
@@ -29,6 +29,6 @@ class FestPartController extends Controller
         $fest->phonecoch = $request->input('phonecoch');
         $fest->user_id = request()->user()->id;
         $fest->save();
-        return redirect()->route('fest.index');
+        return redirect()->route('festall.index');
     }
 }

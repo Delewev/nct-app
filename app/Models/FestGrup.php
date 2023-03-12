@@ -7,5 +7,23 @@ use Illuminate\Database\Eloquent\Model;
 
 class FestGrup extends Model
 {
-    use HasFactory;
+    protected $fillable = [
+        'name',
+        'lastname',
+        'phone',
+        'telegafets',
+        'fut',
+        'category',
+        'city',
+        'team',
+        'titelfest',
+        'namecoch',
+        'phonecoch',
+        'user_id'
+    ];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

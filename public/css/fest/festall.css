@@ -1,0 +1,33 @@
+.festall{
+    margin-top: 20px;
+    position: absolute;
+    left: 330px;
+    width: 700px;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    font-family: -apple-system,system-ui,Helvetica Neue,Roboto,sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+}
+.festgrup{
+
+}
+.s1{
+    display: flex;
+}
+.center{
+    text-align: center;
+}
+.festteam{
+    text-align: center;
+    padding: 10px;
+    width: auto;
+    height: auto;
+    background-color: white;
+    border-radius: 15px;
+    border: 2px solid #cccccc;
+}
+.festteam p{
+    margin: 0;
+}

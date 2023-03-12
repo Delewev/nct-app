@@ -1,0 +1,11 @@
+.tables{
+    margin: 30px;
+    padding: 20px;
+    border: 2px solid #cccccc;
+    border-radius: 20px;
+    width: auto;
+    height: auto;
+}
+h4{
+  text-align: center;
+}

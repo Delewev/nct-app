@@ -32,6 +32,6 @@ class FestGrupController extends Controller
         $fest->phonecoch = $request->input('phonecoch');
         $fest->user_id = request()->user()->id;
         $fest->save();
-        return redirect()->route('fest.index');
+        return redirect()->route('festall.index');
     }
 }
