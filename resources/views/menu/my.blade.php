@@ -6,6 +6,44 @@
         <div class="my-name">
             <img class="avotar" src="{{asset('img/Icon/icon1.png')}}" alt="">
             <div class="name"><h4>{{$user->name}} {{$user->lastname}} </h4>
+            </div>
+            <div class="logo">
+                @if($user->team == 'Fenomen-A' )
+                    <img src="{{asset('img/team/FA.png')}}" alt="">
+                @elseif($user->team == 'NCT' )
+                    <img src="{{asset('img/team/1_NCTnew.png')}}" alt="">
+                @elseif($user->team == 'G-FAME' )
+                    <img src="{{asset('img/team/gfam.png')}}" alt="">
+                @elseif($user->team == 'Titans' )
+                    <img src="{{asset('img/team/titans.png')}}" alt="">
+                @elseif($user->team == 'Zachet' )
+                    <img src="{{asset('img/team/zachet.png')}}" alt="">
+                @elseif($user->team == 'Husky' )
+                    <img src="{{asset('img/team/husky.png')}}" alt="">
+                @elseif($user->team == 'Insight' )
+                    <img src="{{asset('img/team/insight.png')}}" alt="">
+                @elseif($user->team == 'NO-NAME' )
+                    <img src="{{asset('img/team/no-name.png')}}" alt="">
+                @elseif($user->team == 'NO-LIMIT' )
+                    <img src="{{asset('img/team/team-icon/no-limit.jpg')}}" alt="">
+                @elseif($user->team == 'Power' )
+                    <img src="{{asset('img/team/team-icon/power.png')}}" alt="">
+                @elseif($user->team == 'Grand-Arena' )
+                    <img src="{{asset('img/team/team-icon/grand.png')}}" alt="">
+                @elseif($user->team == 'Destiny' )
+                    <img src="{{asset('img/team/team-icon/destiny.jpg')}}" alt="">
+                @elseif($user->team == 'LEGION' )
+                    <img src="{{asset('img/team/Legion.png')}}" alt="">
+                @elseif($user->team == 'Groove' )
+                    <img src="{{asset('img/team/team-icon/groove.jpg')}}" alt="">
+                @elseif($user->team == 'Фаворит' )
+                    <img src="{{asset('img/team/team-icon/favorite.jpg')}}" alt="">
+
+                @elseif($user->team == null )
+                    <img src="{{asset('img/cheer.png')}}" alt="">
+                @elseif($user->team == 'Другое')
+                    <img src="{{asset('img/cheer.png')}}" alt="">
+                @endif
 
             </div>
             <div class="setting">
@@ -33,39 +71,11 @@
                     <div class="send-photo"><a href="{{route('photo', ['slug'=>$user->slug])}}">Посмотреть все</a></div>
                 </div>
             </div>
-            <div class="logo">
-                @if($user->team == 'Fenomen-A' )
-                    <img src="{{asset('img/team/FA.png')}}" alt="">
-                @elseif($user->team == 'NCT' )
-                    <img src="{{asset('img/team/1_NCTnew.png')}}" alt="">
-                @elseif($user->team == 'G-FAME' )
-                    <img src="{{asset('img/team/gfam.png')}}" alt="">
-                @elseif($user->team == 'Titans' )
-                    <img src="{{asset('img/team/titans.png')}}" alt="">
-                @elseif($user->team == 'Zachet' )
-                    <img src="{{asset('img/team/zachet.png')}}" alt="">
-                @elseif($user->team == 'Husky' )
-                    <img src="{{asset('img/team/husky.png')}}" alt="">
-                @elseif($user->team == 'Insight' )
-                    <img src="{{asset('img/team/insight.png')}}" alt="">
-                @elseif($user->team == 'NO-NAME' )
-                    <img src="{{asset('img/team/no-name.png')}}" alt="">
-                @elseif($user->team == 'NO-LIMIT' )
-                    <img src="{{asset('img/team/team-icon/no-limit.jpg.png')}}" alt="">
-                @elseif($user->team == 'Grand-Arena' )
-                    <img src="{{asset('img/team/team-icon/grand.png')}}" alt="">
-                @elseif($user->team == 'Destiny' )
-                    <img src="{{asset('img/team/team-icon/destiny.jpg')}}" alt="">
-                @elseif($user->team == 'LEGION' )
-                    <img src="{{asset('img/team/Legion.png')}}" alt="">
 
-                @elseif($user->team == null )
-                    <img src="{{asset('img/cheer.png')}}" alt="">
-                @elseif($user->team == 'Другое')
-                    <img src="{{asset('img/cheer.png')}}" alt="">
-                @endif
-
+            <div class="team">
+              <h4><b>Моя команда</b></h4>
             </div>
+
         </div>
         <div class="upload-component">
             <upload-component></upload-component>

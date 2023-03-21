@@ -6005,6 +6005,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   props: {
@@ -6037,6 +6040,9 @@ __webpack_require__.r(__webpack_exports__);
       axios["delete"]("delete/".concat(id)).then(function (res) {
         _this2.sendData();
       });
+    },
+    openModel: function openModel() {
+      this.modelOpen = true;
     }
   }
 });
@@ -31313,15 +31319,7 @@ var render = function () {
         ]),
       ]),
       _vm._v(" "),
-      _c(
-        "h6",
-        { staticStyle: { "margin-top": "15px", "margin-left": "7px" } },
-        [
-          _vm._v(
-            'Если вы не нашли свою команду, укажите "Другое" и напишите нам в телеграм!'
-          ),
-        ]
-      ),
+      _vm._m(9),
     ]),
     _vm._v(" "),
     _c("div", { staticClass: "btns" }, [
@@ -31342,11 +31340,7 @@ var render = function () {
               },
             },
           },
-          [
-            _c("span", [_vm._v("\n                Сохранить\n            ")]),
-            _vm._v(" "),
-            _c("i", [_vm._v("v")]),
-          ]
+          [_vm._m(10), _vm._v(" "), _c("i", [_vm._v("v")])]
         ),
       ]),
       _vm._v(" "),
@@ -31363,15 +31357,11 @@ var render = function () {
             },
             on: {
               click: function ($event) {
-                return _vm.sendDelete(_vm.user.id)
+                return _vm.openModel()
               },
             },
           },
-          [
-            _c("span", [
-              _vm._v("\n                Удалить аккаунт\n            "),
-            ]),
-          ]
+          [_vm._m(11)]
         ),
       ]),
     ]),
@@ -31431,6 +31421,38 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", [_c("h6", [_vm._v("Позиция")])])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "h6",
+      { staticStyle: { "margin-top": "15px", "margin-left": "7px" } },
+      [
+        _c("b", [
+          _vm._v(
+            '\n            Если вы не нашли свою команду, укажите "Другое" и напишите нам в\n            '
+          ),
+          _c("a", { attrs: { href: "https://t.me/vkcheer" } }, [
+            _vm._v("телеграм"),
+          ]),
+          _vm._v(". C уважением ВКCheer!"),
+        ]),
+      ]
+    )
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("span", [_c("b", [_vm._v("Сохранить")])])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("span", [_c("b", [_vm._v("Удалить аккаунт")])])
   },
 ]
 render._withStripped = true

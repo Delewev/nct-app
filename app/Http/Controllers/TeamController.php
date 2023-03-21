@@ -48,7 +48,7 @@ class TeamController extends Controller
     public function gfam()
     {
         return view('team.gfam', [
-            'users' => User::query()->where('team', '=', 'G-FAM')->get(),
+            'users' => User::query()->where('team', '=', 'G-FAME')->get(),
             'user' => Auth::user()]);
     }
 

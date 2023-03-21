@@ -168,23 +168,26 @@
                     </div>
                 </div>
             </div>
-            <h6 style="margin-top: 15px; margin-left: 7px">Если вы не нашли свою команду, укажите "Другое" и напишите нам в телеграм!</h6>
+            <h6 style="margin-top: 15px; margin-left: 7px"><b>
+                Если вы не нашли свою команду, укажите "Другое" и напишите нам в
+                <a href="https://t.me/vkcheer">телеграм</a>. C уважением ВКCheer!</b></h6>
         </div>
         <div class="btns">
             <div>
                 <button type="submit" class="button" name="update" id="submit" onClick="submit" @click="sendData()">
                 <span>
-                    Сохранить
+                    <b>Сохранить</b>
                 </span>
                     <i>v</i>
                 </button>
             </div>
             <div>
-                <button type="submit" class="button2" name="update" id="submit" onClick="submit" @click="sendDelete(user.id)">
+                <button type="submit" class="button2" name="update" id="submit" onClick="submit" @click="openModel()">
                 <span>
-                    Удалить аккаунт
+                   <b>Удалить аккаунт</b>
                 </span>
                 </button>
+
             </div>
         </div>
     </div>
@@ -207,6 +210,7 @@ export default {
         this.thisUser()
     },
     methods: {
+
         sendData() {
             axios
                 .get(this.dataupdate, {
@@ -223,7 +227,10 @@ export default {
                 this.sendData()
             })
 
-        }
+        },
+        openModel() {
+            this.modelOpen = true
+        },
     },
 };
 </script>

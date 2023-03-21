@@ -1,17 +1,17 @@
-@extends('layouts.app')
+@extends('auth')
 
-@section('content')
+@section('register')
     <link rel="stylesheet" href={{asset('css/style.css')}}>
     <link rel="stylesheet" href={{asset('css/app2.css')}}>
-    <div class="fon1" style="background-image: url(img/fon-login.jpg);">
+    <div class="fon1">
         <div class="conteiner-register">
         <div class="form">
             <div class="logo">
-                <img class="logo-img" src="{{ asset('img/cheer.png') }}" alt="">
-                <div class="logo-h"><h4>{{__('Регистрация')}}</h4></div>
+                <img class="logo-img" alt="">
+                <div class="logo-h"><h1>{{__('Регистрация')}}</h1></div>
             </div>
             <div class="card-body">
-                <form method="POST" action="{{ route('register') }}">
+                <form method="POST" action="{{route('register') }}">
                     @csrf
 
                     <div class="form-group row">

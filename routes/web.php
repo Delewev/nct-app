@@ -30,10 +30,12 @@ use Illuminate\Support\Facades\Route;
 Auth::routes();
 
 Route::get('admin', [AdminController::class, 'index'])->name('admin.index');
+Route::get('/', [HomeController::class, 'index'])->name('home.index');
+Route::get('/home', [HomeController::class, 'index'])->name('home.index');
+
 
 Route::post('settings', [SettingsController::class, 'dataupdate'])->name('update.settings');
 Route::get('/dataupdate', [HomeController::class, 'dataupdate'])->name('dataupdate');
-Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::get('/ments', [HomeController::class, 'ments'])->name('ments');
 Route::get('/ments/grup', [HomeController::class, 'grup'])->name('grup');
 
@@ -83,7 +85,7 @@ Route::prefix('team')->group(function (){
 
 
 Route::get('/', function () {
-    return view('auth.login');
+    return view('home');
 });
 
 Route::get('/ments/grup', [FestGrupController::class, 'index'])->name('grup.index');
@@ -95,7 +97,6 @@ Route::get('/ments/festall', [FestController::class,'index'])->name('festall.ind
 
 
 Auth::routes();
-Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::get('/dataupdate', [SettingsController::class, 'dataupdate'])->name('dataupdate');
 Route::delete('/delete/{id}', [SettingsController::class, 'delete'])->name('delete');
 

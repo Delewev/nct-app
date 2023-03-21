@@ -25,8 +25,8 @@
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/home') }}">
-                    <img class="logo-header" src="{{ asset('img/cheer.png') }}" alt="" style="width: 55px;">
-                    <h6 style="color: #1d49aa; margin-top: 6px; margin-left: 5px"><b>#ВКомандеCheer</b></h6>
+                    <img class="logo-header" src="{{ asset('img/cheer2.png') }}" alt="" style="width: 55px;">
+                    <h6 style="color: #1d49aa; margin-top: 8px; margin-left: 5px"><b>#ВКомандеCheer</b></h6>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -44,7 +44,7 @@
                         @guest
                             @if (Route::has('login'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Авторизация') }}</a>
+                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Войти') }}</a>
                                 </li>
                             @endif
 

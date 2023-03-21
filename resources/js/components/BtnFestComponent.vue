@@ -42,7 +42,6 @@ export default {
     methods: {
         openModel() {
             this.modelOpen = true
-
         },
         closeModel() {
             this.modelOpen = false
