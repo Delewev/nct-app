@@ -23,6 +23,7 @@ class User extends Authenticatable
         'slug',
         'email',
         'password',
+        'team_id'
     ];
 
     /**
@@ -44,16 +45,6 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    public function photos(){
-        return $this->hasMany(Photo::class);
-    }
-
-    public function festsgrup(){
-        return $this->hasMany(FestGrup::class);
-    }
-    public function festspart(){
-        return $this->hasMany(FestPart::class);
-    }
 
     use Sluggable;
 

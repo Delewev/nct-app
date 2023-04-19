@@ -8,6 +8,7 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+
     <!-- <link rel="manifest" href="site.webmanifest"> -->
     <link rel="shortcut icon" type="image/x-icon" href="">
     <link rel="shortcut icon" type="image/x-icon" href="{{asset('img/cheer2.png')}}">
@@ -94,11 +95,16 @@
                                                 <li><a href="#">{{ Auth::user()->name }} <i
                                                             class="ti-angle-down"></i></a>
                                                     <ul class="submenu">
-                                                        <li><a class="dropdown-item" href="{{ route('logout') }}"
+                                                        <li>
+                                                            <a class="dropdown-item" href="{{ route('settings') }}">
+                                                                {{ __('Мой аккаунт') }}
+                                                            </a>
+                                                            <a class="dropdown-item" href="{{ route('logout') }}"
                                                                onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                                                 {{ __('Выход') }}
                                                             </a>
+
 
                                                             <form id="logout-form" action="{{ route('logout') }}"
                                                                   method="POST" class="d-none">
@@ -124,33 +130,11 @@
     </div>
 </div>
 <!-- header-end -->
-<div class="slider_area">
-    <div class="ilstration_img wow fadeInRight d-none d-lg-block text-right" data-wow-duration="1s"
-         data-wow-delay=".2s">
-        <img src="{{asset('img/fon-login.png')}}" alt="" style="width: 800px">
 
-    </div>
-    <div class="single_slider  d-flex align-items-center slider_bg_1">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-7 col-md-6">
-                    <div class="slider_text">
-                        <h5 class="wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".2s">Стань частю Cheers</h5>
-                        <h3 class="wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".3s">Найди свою команду</h3>
-                        <p class="wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".4s">Сайт для Всех команд Чир
-                            Спорта PФ</p>
-                        <div class="sldier_btn wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".5s">
-                            <a href="#" class="boxed-btn3">Найти Команду</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+@yield('blog')
 
-</div>
 
-<div class="">
+<div id="app">
     @yield('content')
 </div>
 

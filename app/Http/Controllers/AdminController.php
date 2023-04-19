@@ -11,9 +11,6 @@ class AdminController extends Controller
 
     public function index()
     {
-        $users = User::all();
-        $festgrups = FestGrup::all();
-        $festparts = FestPart::all();
-        return view('admin.admin', compact('users', 'festgrups', 'festparts'));
+
     }
 }

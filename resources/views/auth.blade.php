@@ -95,11 +95,11 @@
 
     </div>
     <div class="single_slider  d-flex align-items-center slider_bg_1">
-        <div class="container">
+        <div class="container" style=" margin-left: 50px">
             <div class="row align-items-center">
                 <div class="col-lg-7 col-md-6">
                     <div class="slider_text">
-                        <img src="{{asset('img/Login-foto.png')}}" alt="" style="width: 700px">
+                        <img src="{{asset('img/Login-foto.png')}}" alt="" style="width: 750px;">
                     </div>
                 </div>
             </div>

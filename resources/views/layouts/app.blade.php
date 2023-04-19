@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>NCT</title>
+    <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -18,101 +18,260 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/set.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/icon.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{asset('css/Shet/css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{asset('css/Shet/css/owl.carousel.min.css')}}">
+    <link rel="stylesheet" href="{{asset('css/Shet/css/magnific-popup.css')}}">
+    <link rel="stylesheet" href="{{asset('css/Shet/css/font-awesome.min.css')}}">
+    <link rel="stylesheet" href="{{asset('css/Shet/css/themify-icons.css')}}">
+    <link rel="stylesheet" href="{{asset('css/Shet/css/nice-select.css')}}">
+    <link rel="stylesheet" href="{{asset('css/Shet/css/flaticon.css')}}">
+    <link rel="stylesheet" href="{{asset('css/Shet/css/gijgo.css')}}">
+    <link rel="stylesheet" href="{{asset('css/Shet/css/animate.min.css')}}">
+    <link rel="stylesheet" href="{{asset('css/Shet/css/slicknav.css')}}">
+    <link rel="stylesheet" href="{{asset('css/Shet/css/style.css')}}">
 </head>
 <body>
-    <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
-            <div class="container">
-                <a class="navbar-brand" href="{{ url('/home') }}">
-                    <img class="logo-header" src="{{ asset('img/cheer2.png') }}" alt="" style="width: 55px;">
-                    <h6 style="color: #1d49aa; margin-top: 8px; margin-left: 5px"><b>#ВКомандеCheer</b></h6>
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav me-auto">
-
-                    </ul>
-
-                    <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ms-auto">
-                        <!-- Authentication Links -->
-                        @guest
-                            @if (Route::has('login'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Войти') }}</a>
-                                </li>
-                            @endif
-
-                            @if (Route::has('register'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Регистрация') }}</a>
-                                </li>
-                            @endif
-                        @else
-                            <div class="contact">
-                                <a class="contact-a" href="https://t.me/vkcheer"><img src="{{asset('img/Icon/Telegram_Messenger.png')}}" alt=""></a>
-                                <a class="contact-a" style="margin-right: 20px" href="mailto:vkcheer@mail.ru"><img src="{{asset('img/Icon/Почта_иконка.png')}}" alt=""></a>
-                            </div>
-                            <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
-                                   data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }}
-                                </a>
+<!-- header-start -->
+<div class="header-area ">
+    <div id="sticky-header" class="main-header-area">
+        <div class="container-fluid ">
+            <div class="header_bottom_border">
+                <div class="row align-items-center">
+                    <div class="col-xl-3 col-lg-2">
+                        <div class="logo">
+                            <a href="{{ url('/') }}">
+                                <img src="{{asset('img/cheer.png')}}" alt="" style="height: 70px">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-7">
+                        <div class="main-menu  d-none d-lg-block">
+                            <nav>
+                                <ul id="navigation">
+                                    <li><a href="{{ url('/') }}">Главное</a></li>
+                                    <li><a href="jobs.html">Команды</a></li>
+                                    <li><a href="#">Чир <i class="ti-angle-down"></i></a>
+                                        <ul class="submenu">
+                                            <li><a href="candidate.html">Команды </a></li>
+                                            <li><a href="job_details.html">Моя команда </a></li>
+                                            <li><a href="elements.html">Элементы</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">Блог <i class="ti-angle-down"></i></a>
+                                        <ul class="submenu">
+                                            <li><a href="blog.html">Блог</a></li>
+                                            <li><a href="single-blog.html">Личный блог</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="contact.html">Контакты</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-3 d-none d-lg-block" style="">
+                        <div class="Appointment" style="margin-right: 50px ">
 
 
-                                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                            @guest
+                                @if (Route::has('login'))
+                                    <li class="nav-item">
+                                        <div class="phone_num d-none d-xl-block">
+                                            <a href="{{route('login')}}">Войти</a>
+                                        </div>
+                                    </li>
+                                @endif
 
-                                    <a class="dropdown-item" href="{{ route('settings') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('settings').submit();">
-                                        <img class="img-ico" src="{{asset('img/Icon/header/1_NCTnew.png')}}" alt="">
-                                        NCT Аккаунт
-                                    </a>
-                                    <a class="dropdown-item" href="{{ route('admin.index') }}"
-                                       >
-                                        <img class="img-ico" src="{{asset('img/Icon/header/admin.png')}}" alt="" style="width: 35px; height: 35px; margin-right:  2px">Панель администратора
-                                    </a>
-                                    <a class="dropdown-item" href="{{ route('settings') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('settings').submit();">
-                                        <img class="img-ico" src="{{asset('img/Icon/header/setting.png')}}" alt="">
-                                        {{ __('Личные данные') }}
-                                    </a>
-                                    <a class="dropdown-item" href="{{ route('settings') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('settings').submit();">
-                                        <img class="img-ico" src="{{asset('img/Icon/header/Замок.png')}}" alt="">
-                                        Безопасность
-                                    </a>
-                                    <form id="settings" action="{{ route('settings') }}" method="GET" class="d-none">
-                                        @csrf
-                                    </form>
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
+                                @if (Route::has('register'))
+                                    <li class="nav-item">
+                                        <div class="d-none d-lg-block">
+                                            <a class="boxed-btn3" href="{{route('register')}}">Регистрация</a>
+                                        </div>
+                                    </li>
+                                @endif
+                            @else
+                                <div class="col-xl-6 col-lg-7">
+                                    <div class="main-menu  d-none d-lg-block">
+                                        <nav>
+                                            <ul id="navigation">
+                                                <li><a href="#">{{ Auth::user()->name }} <i
+                                                            class="ti-angle-down"></i></a>
+                                                    <ul class="submenu">
+                                                        <li>
+                                                            <a class="dropdown-item" href="{{ route('settings') }}">
+                                                                {{ __('Мой аккаунт') }}
+                                                            </a>
+                                                            <a class="dropdown-item" href="{{ route('logout') }}"
+                                                               onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                        <img class="img-ico"  src="{{asset('img/Icon/header/exit.png')}}" alt="">
-                                        {{ __('Выход') }}
-                                    </a>
+                                                                {{ __('Выход') }}
+                                                            </a>
 
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                        @csrf
-                                    </form>
+
+                                                            <form id="logout-form" action="{{ route('logout') }}"
+                                                                  method="POST" class="d-none">
+                                                                @csrf
+                                                            </form>
+                                                        </li>
+
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </nav>
+                                    </div>
                                 </div>
-                            </li>
-                        @endguest
-                    </ul>
+                            @endguest
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="mobile_menu d-block d-lg-none"></div>
+                    </div>
                 </div>
             </div>
-        </nav>
-
-        <main class="">
-            @yield('content')
-        </main>
+        </div>
     </div>
+</div>
+<!-- header-end -->
+
+@yield('blog')
+
+
+<div class="py-4" id="app">
+    @yield('content')
+</div>
+
+<!-- footer start -->
+<footer class="footer">
+    <div class="footer_top">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-3 col-md-6 col-lg-3">
+                    <div class="footer_widget wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
+                        <div class="footer_logo">
+                            <a href="#">
+                                <img src="{{asset('img/cheer2.png')}}" alt="" style="height: 100px">
+                            </a>
+                        </div>
+                        <p>
+                            cheerkomanda@mail.ru <br>
+                            +10 873 672 6782 <br>
+                            600/D, Green road, NewYork
+                        </p>
+                        <div class="socail_links">
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <i class="ti-facebook"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-google-plus"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-twitter"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-instagram"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-xl-2 col-md-6 col-lg-2">
+                    <div class="footer_widget wow fadeInUp" data-wow-duration="1.1s" data-wow-delay=".4s">
+                        <h3 class="footer_title">
+                            Company
+                        </h3>
+                        <ul>
+                            <li><a href="#">About </a></li>
+                            <li><a href="#"> Pricing</a></li>
+                            <li><a href="#">Carrier Tips</a></li>
+                            <li><a href="#">FAQ</a></li>
+                        </ul>
+
+                    </div>
+                </div>
+                <div class="col-xl-3 col-md-6 col-lg-3">
+                    <div class="footer_widget wow fadeInUp" data-wow-duration="1.2s" data-wow-delay=".5s">
+                        <h3 class="footer_title">
+                            Category
+                        </h3>
+                        <ul>
+                            <li><a href="#">Design & Art</a></li>
+                            <li><a href="#">Engineering</a></li>
+                            <li><a href="#">Sales & Marketing</a></li>
+                            <li><a href="#">Finance</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-6 col-lg-4">
+                    <div class="footer_widget wow fadeInUp" data-wow-duration="1.3s" data-wow-delay=".6s">
+                        <h3 class="footer_title">
+                            Subscribe
+                        </h3>
+                        <form action="#" class="newsletter_form">
+                            <input type="text" placeholder="Enter your mail">
+                            <button type="submit">Subscribe</button>
+                        </form>
+                        <p class="newsletter_text">Esteem spirit temper too say adieus who direct esteem esteems
+                            luckily.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="copy-right_text wow fadeInUp" data-wow-duration="1.4s" data-wow-delay=".3s">
+        <div class="container">
+            <div class="footer_border"></div>
+            <div class="row">
+                <div class="col-xl-12">
+                    <p class="copy_right text-center">
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        Copyright &copy;<script>document.write(new Date().getFullYear());</script>
+                        All rights reserved | This template is made with <i class="fa fa-heart-o"
+                                                                            aria-hidden="true"></i> by <a
+                            href="https://colorlib.com" target="_blank">Colorlib</a>
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
 </body>
 </html>
+<script src="{{asset('js/Shet/js/vendor/modernizr-3.5.0.min.js')}}"></script>
+<script src="{{asset('js/Shet/js/vendor/jquery-1.12.4.min.js')}}"></script>
+<script src="{{asset('js/Shet/js/popper.min.js')}}"></script>
+<script src="{{asset('js/Shet/js/bootstrap.min.js')}}"></script>
+<script src="{{asset('js/Shet/js/isotope.pkgd.min.js')}}"></script>
+<script src="{{asset('js/Shet/js/owl.carousel.min.js')}}"></script>
+<script src="{{asset('js/Shet/js/ajax-form.js')}}"></script>
+<script src="{{asset('js/Shet/js/waypoints.min.js')}}"></script>
+<script src="{{asset('js/Shet/js/jquery.counterup.min.js')}}"></script>
+<script src="{{asset('js/Shet/js/imagesloaded.pkgd.min.js')}}"></script>
+<script src="{{asset('js/Shet/js/scrollIt.js')}}"></script>
+<script src="{{asset('js/Shet/js/jquery.scrollUp.min.js')}}"></script>
+<script src="{{asset('js/Shet/js/wow.min.js')}}"></script>
+<script src="{{asset('js/Shet/js/nice-select.min.js')}}"></script>
+<script src="{{asset('js/Shet/js/jquery.slicknav.min.js')}}"></script>
+<script src="{{asset('js/Shet/js/jquery.magnific-popup.min.js')}}"></script>
+<script src="{{asset('js/Shet/js/plugins.js')}}"></script>
+<script src="{{asset('js/Shet/js/gijgo.min.js')}}"></script>
+<script src="{{asset('js/Shet/js/jquery.slicknav.min.js')}}"></script>
+<script src="{{asset('js/Shet/js/jquery.slicknav.min.js')}}"></script>
+
+
+<!--contact js-->
+<script src="{{asset('js/Shet/js/contact.js')}}"></script>
+<script src="{{asset('js/Shet/js/jquery.ajaxchimp.min.js')}}"></script>
+<script src="{{asset('js/Shet/js/jquery.form.js')}}"></script>
+<script src="{{asset('js/Shet/js/jquery.validate.min.js')}}"></script>
+<script src="{{asset('js/Shet/js/mail-script.js')}}"></script>
+<script src="{{asset('js/Shet/js/main.js')}}"></script>

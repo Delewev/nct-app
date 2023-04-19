@@ -1,9 +1,8 @@
-
+.blog{
+    width: auto;
+    height: auto;
+}
 .settings{
-    position: fixed;
-    width: 100%;
-    height: 100vh;
-    overflow-y: scroll;
 }
 
 .form {
