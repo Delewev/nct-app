@@ -6,7 +6,7 @@
     <div class="ments">
         <div class="blok">
             <div class="fest">
-                <img src="{{asset('img/fest.png')}}" alt="">
+                <img src="{{asset('img/cheer.png')}}" alt="">
             </div>
             <div class="text"><p>💫CheerSTUNT FEST MILLENNIUM</p>
                 <p>Состоится 15 июля 2023</p></div>
@@ -26,7 +26,7 @@
         </div>
         <div class="blok">
             <div class="fest">
-                <img src="{{asset('img/fest.png')}}" alt="">
+                <img src="{{asset('img/cheer.png')}}" alt="">
             </div>
             <div class="text"><p>3 июля 2021г.</p>
                 <p>Казань, <a href="https://yandex.ru/maps/43/kazan/?ll=49.145485%2C55.804456&mode=whatshere&whatshere%5Bpoint%5D=49.144455%2C55.804761&whatshere%5Bzoom%5D=17&z=17">

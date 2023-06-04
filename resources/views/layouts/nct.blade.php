@@ -39,7 +39,7 @@
                     <div class="col-xl-3 col-lg-2">
                         <div class="logo">
                             <a href="{{ url('/') }}">
-                                <img src="{{asset('img/cheer.png')}}" alt="" style="height: 70px">
+                                <img src="{{asset('img/cheer.png')}}" alt="" style="height: 70px; margin-top: 10px">
                             </a>
                         </div>
                     </div>
@@ -69,8 +69,6 @@
                     </div>
                     <div class="col-xl-3 col-lg-3 d-none d-lg-block" style="">
                         <div class="Appointment" style="margin-right: 50px ">
-
-
                             @guest
                                 @if (Route::has('login'))
                                     <li class="nav-item">
@@ -92,13 +90,18 @@
                                     <div class="main-menu  d-none d-lg-block">
                                         <nav>
                                             <ul id="navigation">
-                                                <li><a href="#">{{ Auth::user()->name }} <i
-                                                            class="ti-angle-down"></i></a>
+                                                <li>
+                                                    <a href="#">{{ Auth::user()->name }} <i class="ti-angle-down"></i></a>
                                                     <ul class="submenu">
                                                         <li>
                                                             <a class="dropdown-item" href="{{ route('settings') }}">
                                                                 {{ __('Мой аккаунт') }}
                                                             </a>
+                                                            @if(Auth::user()->role = 'user')
+                                                            <a class="dropdown-item" href="{{ route('settings') }}">
+                                                                {{ __('Админка') }}
+                                                            </a>
+                                                            @endif
                                                             <a class="dropdown-item" href="{{ route('logout') }}"
                                                                onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
@@ -147,7 +150,7 @@
                     <div class="footer_widget wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
                         <div class="footer_logo">
                             <a href="#">
-                                <img src="{{asset('img/cheer2.png')}}" alt="" style="height: 100px">
+                                <img src="{{asset('img/cheer.png')}}" alt="" style="height: 100px">
                             </a>
                         </div>
                         <p>

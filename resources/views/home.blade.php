@@ -4,7 +4,7 @@
     <div class="slider_area">
         <div class="ilstration_img wow fadeInRight d-none d-lg-block text-right" data-wow-duration="1s"
              data-wow-delay=".2s">
-            <img src="{{asset('img/fon-login.png')}}" alt="" style="width: 800px">
+            <img src="{{asset('img/Login-foto.png')}}" alt="" style="width: 800px; margin-bottom: 30px">
 
         </div>
         <div class="single_slider  d-flex align-items-center slider_bg_1">

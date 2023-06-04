@@ -39,8 +39,9 @@ class HomeController extends Controller
     public function index()
     {
         $user = Auth::user();
+        $users = User::all();
         return view('home', [
-            'user' => $user
+            'user' => $user, 'users' => $users
         ]);
     }
 

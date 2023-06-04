@@ -436,7 +436,7 @@ h3 {
 /* line 24, ../../Arafath/CL/December/235. Job board/HTML/scss/_btn.scss */
 .boxed-btn3 {
   /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#F91842+0,fd8e5e+100 */
-  background: #00D363;
+  background: #B52D2D;
   color: #fff;
   display: inline-block;
   padding: 13px 29px 13px 29px;
@@ -460,8 +460,8 @@ h3 {
 
 /* line 43, ../../Arafath/CL/December/235. Job board/HTML/scss/_btn.scss */
 .boxed-btn3:hover {
-  color: #00D363 !important;
-  border: 1px solid #00D363;
+  color: #B52D2D !important;
+  border: 1px solid #B52D2D;
   background: transparent;
 }
 
@@ -1182,7 +1182,7 @@ h3 {
 
 /* line 224, ../../Arafath/CL/December/235. Job board/HTML/scss/_header.scss */
 .header-area .main-header-area .main-menu ul li a:hover {
-  color: #00D363;
+  color: red;
 }
 
 /* line 228, ../../Arafath/CL/December/235. Job board/HTML/scss/_header.scss */
@@ -1386,7 +1386,7 @@ h3 {
 
 /* line 1, ../../Arafath/CL/December/235. Job board/HTML/scss/_slider.scss */
 .slider_bg_1 {
-    background-color: #5275B9;
+    background-color: #121213;
 
 
 
@@ -2514,7 +2514,7 @@ h3 {
 
 /* line 1, ../../Arafath/CL/December/235. Job board/HTML/scss/_bradcam.scss */
 .bradcam_bg_1 {
-  background-color: #5275B9;
+  background-color: #121213;
 }
 
 /* line 4, ../../Arafath/CL/December/235. Job board/HTML/scss/_bradcam.scss */

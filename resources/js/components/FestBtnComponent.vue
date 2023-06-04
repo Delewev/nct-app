@@ -5,7 +5,7 @@
             <div class="fests-bac" @click="closeModel"></div>
             <div class="fests-con">
                 <div class="fests-header" style="background-color: white;">
-                    <img src="/img/fest.png" alt="" class="img-fest">
+                    <img src="/img/cheer.png" alt="" class="img-fest">
                 </div>
                 <div class="contents">
                     <div class="form-grup">

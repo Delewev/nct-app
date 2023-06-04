@@ -88,13 +88,6 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::get('/ments/grup', [FestGrupController::class, 'index'])->name('grup.index');
-Route::post('/ments/grup', [FestGrupController::class, 'store'])->name('grup.store');
-Route::get('/ments/part', [FestPartController::class, 'index'])->name('part.index');
-Route::post('/ments/part', [FestPartController::class, 'store'])->name('part.store');
-
-Route::get('/ments/festall', [FestController::class,'index'])->name('festall.index');
-
 
 Auth::routes();
 Route::get('/dataupdate', [SettingsController::class, 'dataupdate'])->name('dataupdate');

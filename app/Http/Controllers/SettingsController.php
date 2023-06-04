@@ -56,4 +56,7 @@ class SettingsController extends AdminController
         return view('slug', ['user' => User::where('slug', $slug)->firstOrFail(),
             'users' => Auth::user()]);
     }
+
+
+
 }

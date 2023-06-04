@@ -9,7 +9,7 @@
     <div class="fests-con">
         <div>
             <div class="fests-header" style="">
-                <img src="{{asset('img/fest.png')}}" alt="" class="img-fest">
+                <img src="{{asset('img/cheer.png')}}" alt="" class="img-fest">
             </div>
             <div class="contents">
                 <div class="form-grup">
