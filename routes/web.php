@@ -1,11 +1,8 @@
 <?php
 
 use App\Http\Controllers\AdminController;
-use App\Http\Controllers\Fest\FestController;
-use App\Http\Controllers\Fest\FestGrupController;
-use App\Http\Controllers\Fest\FestPartController;
+use App\Http\Controllers\FestController;
 use App\Http\Controllers\HomeController;
-use App\Http\Controllers\Message\MessageController;
 use App\Http\Controllers\PhotoController;
 use App\Http\Controllers\SettingsController;
 use App\Http\Controllers\TeamController;
@@ -30,7 +27,9 @@ use Illuminate\Support\Facades\Route;
 Auth::routes();
 
 Route::get('admin', [AdminController::class, 'index'])->name('admin.index');
+
 Route::get('/', [HomeController::class, 'index'])->name('home.index');
+
 Route::get('/home', [HomeController::class, 'index'])->name('home.index');
 
 
@@ -45,6 +44,8 @@ Route::get('/my/settings', [SettingsController::class, 'index'])->name('settings
 Route::get('cheer/{slug?}', [SettingsController::class, 'you'])->name('you');
 Route::get('/team', [HomeController::class, 'team'])->name('team');
 Route::get('/message', [MessageController::class, 'index'])->name('message');
+
+Route::get('/fest', [FestController::class, 'index'])->name('fest.index')->middleware('auth');
 
 
 // Photo

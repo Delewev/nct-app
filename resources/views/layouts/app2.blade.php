@@ -47,28 +47,28 @@
                             </div>
                         </div>
                         <div class="col-xl-6 col-lg-7">
-                            <div class="main-menu  d-none d-lg-block">
-                                <nav>
-                                    <ul id="navigation">
-                                        <li><a href="{{ url('/') }}">Главное</a></li>
-                                        <li><a href="jobs.html">Команды</a></li>
-                                        <li><a href="#">Чир <i class="ti-angle-down"></i></a>
-                                            <ul class="submenu">
-                                                <li><a href="candidate.html">Команды </a></li>
-                                                <li><a href="job_details.html">Моя команда </a></li>
-                                                <li><a href="elements.html">Элементы</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="#">Блог <i class="ti-angle-down"></i></a>
-                                            <ul class="submenu">
-                                                <li><a href="blog.html">Блог</a></li>
-                                                <li><a href="single-blog.html">Личный блог</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="contact.html">Контакты</a></li>
-                                    </ul>
-                                </nav>
-                            </div>
+{{--                            <div class="main-menu  d-none d-lg-block">--}}
+{{--                                <nav>--}}
+{{--                                    <ul id="navigation">--}}
+{{--                                        <li><a href="{{ url('/') }}">Главное</a></li>--}}
+{{--                                        <li><a href="jobs.html">Команды</a></li>--}}
+{{--                                        <li><a href="#">Чир <i class="ti-angle-down"></i></a>--}}
+{{--                                            <ul class="submenu">--}}
+{{--                                                <li><a href="candidate.html">Команды </a></li>--}}
+{{--                                                <li><a href="job_details.html">Моя команда </a></li>--}}
+{{--                                                <li><a href="elements.html">Элементы</a></li>--}}
+{{--                                            </ul>--}}
+{{--                                        </li>--}}
+{{--                                        <li><a href="#">Блог <i class="ti-angle-down"></i></a>--}}
+{{--                                            <ul class="submenu">--}}
+{{--                                                <li><a href="blog.html">Блог</a></li>--}}
+{{--                                                <li><a href="single-blog.html">Личный блог</a></li>--}}
+{{--                                            </ul>--}}
+{{--                                        </li>--}}
+{{--                                        <li><a href="contact.html">Контакты</a></li>--}}
+{{--                                    </ul>--}}
+{{--                                </nav>--}}
+{{--                            </div>--}}
                         </div>
                         <div class="col-xl-3 col-lg-3 d-none d-lg-block" style="">
                             <div class="Appointment" style="margin-right: 50px ">

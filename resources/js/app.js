@@ -19,12 +19,10 @@ window.Vue = require('vue').default;
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
-Vue.component('example-component', require('./components/ExampleComponent.vue').default);
-Vue.component('user-component', require('./components/UserComponent.vue').default);
-Vue.component('upload-component', require('./components/UploadFileComponent').default);
-Vue.component('mess-component', require('./components/MessBtnComponent.vue').default);
-Vue.component('fest-component', require('./components/FestBtnComponent').default);
-Vue.component('btn-component', require('./components/BtnFestComponent').default);
+
+Vue.component('admin-component', require('./components/Admin.vue').default);
+Vue.component('admin-content-component', require('./components/AdminContent.vue').default);
+
 
 
 

@@ -18,7 +18,7 @@
 
     <div class="settings" style="">
         <div class="form">
-                <user-component dataupdate="{{route('dataupdate')}}" :user=@json($user) ></user-component>
+{{--                <user-component dataupdate="{{route('dataupdate')}}" :user=@json($user) ></user-component>--}}
         </div>
     </div>
 

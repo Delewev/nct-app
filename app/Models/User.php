@@ -22,8 +22,17 @@ class User extends Authenticatable
         'name',
         'slug',
         'email',
+        'lastname',
+        'phone',
+        'person',
+        'day',
+        'month',
+        'year',
+        'city',
+        'cheer',
         'password',
-        'team_id'
+        'team_id',
+        'role'
     ];
 
     /**
@@ -57,4 +66,11 @@ class User extends Authenticatable
             ]
         ];
     }
+
+    public function teams(){
+
+        return $this->belongsTo(Team::class);
+    }
+
+
 }
