@@ -22,6 +22,7 @@ window.Vue = require('vue').default;
 
 Vue.component('admin-component', require('./components/Admin.vue').default);
 Vue.component('admin-content-component', require('./components/AdminContent.vue').default);
+Vue.component('user-component', require('./components/User.vue').default);
 
 
 

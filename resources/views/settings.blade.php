@@ -17,8 +17,8 @@
     <link rel="stylesheet" href={{asset('css/settings.css')}}>
 
     <div class="settings" style="">
-        <div class="form">
-{{--                <user-component dataupdate="{{route('dataupdate')}}" :user=@json($user) ></user-component>--}}
+        <div class="form ">
+                <user-component dataupdate="{{route('dataupdate')}}" :user=@json($user) ></user-component>
         </div>
     </div>
 

@@ -26,11 +26,9 @@ class SettingsController extends AdminController
         $user->lastname = $editedUser->lastname;
         $user->phone = $editedUser->phone;
         $user->person = $editedUser->person;
-        $user->day = $editedUser->day;
-        $user->month = $editedUser->month;
-        $user->year = $editedUser->year;
+        $user->date = $editedUser->date;
         $user->city = $editedUser->city;
-        $user->team = $editedUser->team;
+        $user->teams_id = $editedUser->teams_id;
         $user->cheer = $editedUser->cheer;
         $user->save();
         return $user;

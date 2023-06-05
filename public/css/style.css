@@ -10,7 +10,7 @@
     font-size: 15px;
     width: 350px;
     height: auto;
-background-color: grey;
+background-color: #45348B;
     margin-bottom: 200px;
     margin-top: 20px;
     border-radius: 15px;
@@ -27,7 +27,7 @@ background-color: grey;
     font-size: 15px;
     width: 400px;
     height: auto;
-    background-color: grey;
+    background-color: #B97491;
     margin-bottom: 100px;
     margin-top: 20px;
     margin-left: 30px;
@@ -76,16 +76,16 @@ background-color: grey;
 
 .btn {
     display: inline-block;
-    border: 1px solid grey;
+    border: 1px solid green;
     padding: 10px 100px;
-    background-color: #B52D2D;
+    background-color: #2fa360;
     transition: all .5s;
     border-radius: 15px;
     color: white;
 }
 
 .btn:hover {
-    background-color:  #96002D;
+    background-color: #69A37A;
 }
 
 .register {
@@ -96,9 +96,9 @@ background-color: grey;
 .btn-register {
     position: revert;
     display: inline-block;
-    border: 1px black;
+    border: 1px solid green;
     padding: 10px 30px;
-    background-color: #B52D2D;
+    background-color: #2fa360;
     transition: all .5s;
     border-radius: 15px;
     color: white;
@@ -107,7 +107,7 @@ background-color: grey;
 }
 
 .btn-register:hover {
-    background-color: #96002D;
+    background-color: #69A37A;
 }
 
 .children {

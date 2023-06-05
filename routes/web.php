@@ -33,8 +33,8 @@ Route::get('/', [HomeController::class, 'index'])->name('home.index');
 Route::get('/home', [HomeController::class, 'index'])->name('home.index');
 
 
-Route::post('settings', [SettingsController::class, 'dataupdate'])->name('update.settings');
-Route::get('/dataupdate', [HomeController::class, 'dataupdate'])->name('dataupdate');
+Route::post('dataupdate', [SettingsController::class, 'dataupdate'])->name('update.settings');
+Route::get('/dataupte', [HomeController::class, 'dataupdate'])->name('dataupdate');
 Route::get('/ments', [HomeController::class, 'ments'])->name('ments');
 Route::get('/ments/grup', [HomeController::class, 'grup'])->name('grup');
 
