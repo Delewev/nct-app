@@ -1,10 +1,10 @@
-@extends('auth')
+@extends('layouts.nct')
 
-@section('register')
+@section('content')
     <link rel="stylesheet" href={{asset('css/style.css')}}>
     <link rel="stylesheet" href={{asset('css/app2.css')}}>
-    <div class="fon1">
-        <div class="conteiner-register">
+    <div class="col-md-4  mx-auto rounded">
+        <div class="conteiner-register ">
         <div class="form">
             <div class="logo">
                 <img class="logo-img" alt="">

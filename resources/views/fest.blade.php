@@ -1,10 +1,6 @@
-@extends('layouts.app2')
-@section('blog')
-<div id="app" >
-    <admin-component></admin-component>
-</div>
-@endsection
+@extends('layouts.nct')
 @section('content')
-    <admin-content-component></admin-content-component>
+    <fest-component></fest-component>
 @endsection
+
 

@@ -28,7 +28,6 @@ Auth::routes();
 
 Route::get('admin', [AdminController::class, 'index'])->name('admin.index');
 
-Route::get('/', [HomeController::class, 'index'])->name('home.index');
 
 Route::get('/home', [HomeController::class, 'index'])->name('home.index');
 
@@ -44,6 +43,8 @@ Route::get('/my/settings', [SettingsController::class, 'index'])->name('settings
 Route::get('cheer/{slug?}', [SettingsController::class, 'you'])->name('you');
 Route::get('/team', [HomeController::class, 'team'])->name('team');
 Route::get('/message', [MessageController::class, 'index'])->name('message');
+
+Route::post('/teams', [TeamController::class, 'store'])->name('teams.store');
 
 Route::get('/fest', [FestController::class, 'index'])->name('fest.index')->middleware('auth');
 

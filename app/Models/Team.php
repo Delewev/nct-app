@@ -9,8 +9,12 @@ class Team extends Model
 {
     use HasFactory;
 
-    public function users(){
+    protected $guarded = false;
+
+    public function users()
+    {
         return $this->hasMany(User::class);
     }
+
 
 }

@@ -21,7 +21,10 @@ window.Vue = require('vue').default;
 
 
 Vue.component('admin-component', require('./components/Admin.vue').default);
-Vue.component('admin-content-component', require('./components/AdminContent.vue').default);
+Vue.component('fest-component', require('./components/Fest.vue').default);
+Vue.component('home-component', require('./components/Home.vue').default);
+Vue.component('admin-content-component', require('./components/Admin/AdminContent.vue').default);
+Vue.component('fest-content-component', require('./components/FestContent.vue').default);
 Vue.component('user-component', require('./components/User.vue').default);
 
 

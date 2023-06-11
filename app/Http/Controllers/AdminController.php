@@ -9,8 +9,13 @@ use Illuminate\Support\Facades\Auth;
 class AdminController extends Controller
 
 {
-    public function index(){
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
 
-        return view('admin');
+    public function index(){
+        $user = Auth::user();
+        return view('admin.admin', ['user' => $user]);
     }
 }

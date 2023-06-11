@@ -87,25 +87,27 @@
 </div>
 <!-- header-end -->
 <div class="slider_area">
-    <div class="ilstration_img wow fadeInRight d-none d-lg-block text-right" data-wow-duration="1s"
-         data-wow-delay=".2s">
-        <div class="">
-            @yield('register')
-        </div>
-
-    </div>
+<div class="">
     <div class="single_slider  d-flex align-items-center slider_bg_1">
         <div class="container" style=" margin-left: 50px">
             <div class="row align-items-center">
                 <div class="col-lg-7 col-md-6">
                     <div class="slider_text">
-                        <img src="{{asset('img/Login-foto.png')}}" alt="" style="width: 750px;">
+                        <img class="img-fluid" src="{{asset('img/Login-foto.png')}}" alt="" style="">
                     </div>
                 </div>
             </div>
         </div>
+        <div class="ilstration_img wow fadeInRight d-none d-lg-block text-right" data-wow-duration="1s"
+             data-wow-delay=".2s">
+            <div class="">
+                @yield('register')
+            </div>
+
+        </div>
     </div>
 
+</div>
 </div>
 
 

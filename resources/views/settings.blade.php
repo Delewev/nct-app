@@ -1,4 +1,4 @@
-@extends('layouts.app2')
+@extends('layouts.nct')
 @section('blog')
     <div class="bradcam_area bradcam_bg_1">
         <div class="container">
@@ -17,7 +17,7 @@
     <link rel="stylesheet" href={{asset('css/settings.css')}}>
 
     <div class="settings" style="">
-        <div class="form ">
+        <div class="form">
                 <user-component dataupdate="{{route('dataupdate')}}" :user=@json($user) ></user-component>
         </div>
     </div>

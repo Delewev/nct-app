@@ -1,8 +1,8 @@
-@extends('auth')
+@extends('layouts.nct')
 
-@section('register')
+@section('content')
     <link rel="stylesheet" href={{asset('css/style.css')}}>
-    <div style="display: flex">
+    <div class="col-md-4  mx-auto rounded">
         <div class="fon1" style="">
             <div class="fon">
                 <div class="conteiner">
