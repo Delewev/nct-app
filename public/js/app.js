@@ -6046,7 +6046,7 @@ var staticRenderFns = [function () {
     staticClass: "mb-3"
   }, [_c("div", {
     staticClass: "bradcam_text text-white"
-  }, [_c("h1", [_vm._v(" Cheer Stunt Fest 2023 ")])])]), _vm._v(" "), _c("a", {
+  }, [_c("h1", [_vm._v(" Cheer Stunt Fest 2023г ")])])]), _vm._v(" "), _c("a", {
     staticClass: "col-md-3 btn btn-outline-danger mb-3",
     attrs: {
       type: "button",
