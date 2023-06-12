@@ -5,7 +5,7 @@
                 <div class="row ">
                     <div class="mb-3">
                         <div class="bradcam_text text-white">
-                            <h1> Cheer Stunt Fest 2023 </h1>
+                            <h1> Cheer Stunt Fest 2023г </h1>
                         </div>
                     </div>
                     <a type="button" href="/fest" class="col-md-3 btn btn-outline-danger mb-3">
