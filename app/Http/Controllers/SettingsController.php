@@ -19,6 +19,18 @@ class SettingsController extends AdminController
 
     public function dataupdate(Request $request)
     {
+        $editedUser = json_decode($request->user);
+        $user = User::where('id',$editedUser->id)->first();
+        $user->name = $editedUser->name;
+        $user->lastname = $editedUser->lastname;
+        $user->slug = $editedUser->slug;
+        $user->phone  = $editedUser->phone;
+        $user->city  = $editedUser->city;
+        $user->person  = $editedUser->person;
+        $user->date  = $editedUser->date;
+        $user->save();
+        return $user;
+
 
     }
 

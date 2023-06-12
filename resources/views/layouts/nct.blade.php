@@ -44,7 +44,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: black">
+  background-color: #3A434B">
 <div id="app" class="">
     <nav class="navbar navbar-expand-lg navbar-dark bg-black shadow-sm">
         <div class="container">
@@ -143,7 +143,6 @@
 <!-- AdminLTE App -->
 <script src="{{asset('dist/js/adminlte.js')}}"></script>
 <!-- AdminLTE for demo purposes -->
-<script src="{{asset('dist/js/demo.js')}}"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="{{asset('dist/js/pages/dashboard.js')}}"></script>
 </body>

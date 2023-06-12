@@ -45,44 +45,4 @@ class HomeController extends Controller
         ]);
     }
 
-//    public function my()
-//    {
-//        $user = Auth::user();
-//        return view('my', [
-//            'user' => $user
-//        ]);
-//    }
-    public function ments()
-    {
-        $user = Auth::user();
-        return view('menu.ments.ments', [
-            'user' => $user
-        ]);
-    }
-
-    public function team()
-    {
-        $user = Auth::user();
-        return view('menu.team', [
-            'user' => $user
-        ]);
-    }
-
-    public function nct()
-    {
-        $user = Auth::user();
-        return view('team.nct', [
-            'user' => $user
-        ]);
-    }
-    public function grup()
-    {
-        $user = Auth::user();
-        return view('grup', [
-            'user' => $user
-        ]);
-    }
-
-
-
 }
