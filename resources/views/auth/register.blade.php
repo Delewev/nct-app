@@ -3,7 +3,7 @@
 @section('content')
     <link rel="stylesheet" href={{asset('css/style.css')}}>
     <link rel="stylesheet" href={{asset('css/app2.css')}}>
-    <div class="col-md-4  mx-auto rounded">
+    <div class="col-md-6  mx-auto rounded">
         <div class="conteiner-register ">
         <div class="form">
             <div class="logo">

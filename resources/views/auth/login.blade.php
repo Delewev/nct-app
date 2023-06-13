@@ -2,7 +2,7 @@
 
 @section('content')
     <link rel="stylesheet" href={{asset('css/style.css')}}>
-    <div class="col-md-4  mx-auto rounded">
+    <div class="col-md-6  mx-auto rounded">
         <div class="fon1" style="">
             <div class="fon">
                 <div class="conteiner">
@@ -48,9 +48,9 @@
                                     </div>
                                     <div class="checkbox">
                                         <label for="remember">
-                                            <input type="checkbox" name="remember"
-                                                   id="remember" {{ old('remember') ? 'checked' : '' }}>
-                                            <span class="col-md-4">{{ __('Запомнить') }}</span>
+{{--                                            <input type="checkbox" name="remember"--}}
+{{--                                                   id="remember" {{ old('remember') ? 'checked' : '' }}>--}}
+{{--                                            <span class="col-md-4">{{ __('Запомнить') }}</span>--}}
                                         </label>
                                     </div>
                                     <div class="button">
@@ -58,14 +58,14 @@
                                             <button type="submit" class="btn">
                                                 {{ __('Войти') }}
                                             </button>
-                                            <div>
-                                                @if (Route::has('password.request'))
-                                                    <a class="" href="{{ route('password.request') }}">
-                                                        {{ __('Забыли пароль?') }}
-                                                    </a>
-                                                @endif
+    {{--                                            <div>--}}
+    {{--                                                @if (Route::has('password.request'))--}}
+    {{--                                                    <a class="" href="{{ route('password.request') }}">--}}
+    {{--                                                        {{ __('Забыли пароль?') }}--}}
+    {{--                                                    </a>--}}
+    {{--                                                @endif--}}
 
-                                            </div>
+    {{--                                            </div>--}}
                                         </div>
                                     </div>
                                 </form>

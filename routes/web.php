@@ -32,4 +32,5 @@ Route::get('/my/settings', [SettingsController::class, 'index'])->name('settings
 Route::get('/dataupdate', [SettingsController::class, 'dataupdate'])->name('dataupdate');
 Route::delete('/delete/{id}', [SettingsController::class, 'delete'])->name('delete');
 Route::get('/fest', [FestController::class, 'index'])->name('fest.index');
+Route::get('/fest/store', [FestController::class, 'getStore'])->name('feststore.index');
 

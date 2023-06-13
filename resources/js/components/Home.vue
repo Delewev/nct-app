@@ -1,5 +1,4 @@
 <template>
-    <div class="bradcam_area bradcam_bg_1 row">
         <div class="row col-md-9 mx-auto rounded">
             <div class="col align-self-center">
                 <div class="row ">
@@ -8,7 +7,7 @@
                             <h1> Cheer Stunt Fest 2023г </h1>
                         </div>
                     </div>
-                    <a type="button" href="/fest" class="col-md-3 btn btn-outline-danger mb-3">
+                    <a type="button" href="/fest/store" class="col-md-3 btn btn-outline-danger mb-3">
                         Подать заявку
                     </a>
                 </div>
@@ -19,7 +18,6 @@
                 </div>
             </div>
         </div>
-    </div>
 </template>
 
 <script>
